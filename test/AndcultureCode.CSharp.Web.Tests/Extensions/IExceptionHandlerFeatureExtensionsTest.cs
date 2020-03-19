@@ -18,7 +18,6 @@ namespace AndcultureCode.CSharp.Web.Tests.Unit.Extensions
 
         #endregion Setup
 
-
         #region ToResult
 
         [Fact]
