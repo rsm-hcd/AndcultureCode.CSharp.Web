@@ -8,7 +8,7 @@ using Shouldly;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace AndcultureCode.CSharp.Core.Tests.Unit.Extensions
+namespace AndcultureCode.CSharp.Web.Tests.Unit.Extensions
 {
     public class IExceptionHandlerFeatureExtensionsTest : BaseUnitTest
     {
@@ -30,11 +30,7 @@ namespace AndcultureCode.CSharp.Core.Tests.Unit.Extensions
         [Fact]
         public void ToResult_When_Feature_Error_Is_Null_Returns_Null()
         {
-            // Arrange
-            var feature = Mock.Of<IExceptionHandlerFeature>();
-
-            // Act & Assert
-            IExceptionHandlerFeatureExtensions.ToResult(feature).ShouldBeNull();
+            Mock.Of<IExceptionHandlerFeature>().ToResult().ShouldBeNull();
         }
 
         [Fact]
@@ -45,7 +41,7 @@ namespace AndcultureCode.CSharp.Core.Tests.Unit.Extensions
             var feature = Mock.Of<IExceptionHandlerFeature>(m => m.Error == expected);
 
             // Act
-            var result = IExceptionHandlerFeatureExtensions.ToResult(feature);
+            var result = feature.ToResult();
 
             // Assert
             result.ShouldNotBeNull();

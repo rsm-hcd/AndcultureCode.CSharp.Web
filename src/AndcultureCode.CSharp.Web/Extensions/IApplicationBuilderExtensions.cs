@@ -9,7 +9,7 @@ namespace AndcultureCode.CSharp.Web.Extensions
     public static class IApplicationBuilderExtensions
     {
         /// <summary>
-        /// Configure dotnet core API to wrap unhandled exceptions in IResult<Error>
+        /// Configure dotnet core API to wrap unhandled exceptions in IResult<>
         /// and respond with json
         /// </summary>
         public static void UseGlobalExceptionHandler(this IApplicationBuilder app)
