@@ -1,0 +1,19 @@
+after_script:
+- bash <(curl -s https://codecov.io/bash)
+dotnet: 2.2.1
+env:
+  global:
+  - DOTNET_CLI_TELEMETRY_OPTOUT: 1
+language: csharp
+mono: none
+notifications:
+  slack:
+    on_failure: always
+    on_pull_requests: true
+    on_success: always
+    rooms:
+      secure: ElP7YEPtALlPbmrxWGJsT5eFBT6cxhV9LiLVOShAr/6JF54NHHEx+oVV1uccKBKQ0JUI3B9dEKZGUTmia/6t0H+pHizUlWNPiy8YTvWnodKo7YxUZ8Qfg/XcRgxRPNjWYO3GZu6C+LE4aZCy6cYXhgY8tRCeIWm0YGIu6cPgoC74aBrUoEm3DcL7c+bhwtR5maKkgoDI7xDoDL5lGnmWkYJjEmUOKZZ0kAwVAesvmKhfmAds/z2spHCrzV+eJqWQMFCfpjfkZ8YkkpiZyNq+mEXomtfEB3zTAK0mPgoex65k+Tf/zE476XqFlA5X/YOkQLe1yFCv7oNdGPfacjiVtKE8ripb/brOMNj1AeTtNojcSYvvtBWntOOj+SToa5+3Lp3by1G6MYHPC0UzzUeSRtrKoA+UWTyBcheii/a3yzPi0DljQilPjTfIaGEMeTKdrYP+RvsdT1FwK/pDS9dXugPOPFHinZjwAWEg7q6uDtiFVwf82uh4HVOGdTxrIwosW8plex6FOjUH4PzrKkVQcaKsdS/uB7fqD4FyMYz6+EjeHgZUoVcASvxFtBd76q/abGZ4TY+acQYCmLAReywWmqegwYhtjwdF/t80dNi2AbPqO3L4xRKM2ZKn1OzxXkNRmbY/YSiPyjoPs3PbbQZTK3S2uGBjPxzQ4yJ5O0td9G4=
+script:
+- dotnet restore
+- dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover -p:Threshold=90
+solution: All.sln

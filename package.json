@@ -1,0 +1,18 @@
+{
+  "name": "AndcultureCode.CSharp.Web",
+  "version": "0.0.1",
+  "description": "Simple nodejs tooling for managing the project",
+  "main": "npx and-cli",
+  "private": true,
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AndcultureCode/AndcultureCode.CSharp.Web.git"
+  },
+  "author": "andculture",
+  "license": "ISC",
+  "homepage": "https://github.com/AndcultureCode/AndcultureCode.CSharp.Web#readme",
+  "devDependencies": {
+    "and-cli": "0.0.5"
+  }
+}
