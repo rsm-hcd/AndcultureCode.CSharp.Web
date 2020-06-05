@@ -4,10 +4,13 @@ using Microsoft.AspNetCore.Diagnostics;
 
 namespace AndcultureCode.CSharp.Web.Extensions
 {
+    /// <summary>
+    /// Extensions for IExceptionHandlerFeature
+    /// </summary>
     public static class IExceptionHandlerFeatureExtensions
     {
         /// <summary>
-        /// Transform exception context feature to IResult<object>
+        /// Transform exception context feature to IResult
         /// </summary>
         public static IResult<object> ToResult(this IExceptionHandlerFeature feature)
         {
