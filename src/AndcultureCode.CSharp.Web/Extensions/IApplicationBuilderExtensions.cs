@@ -6,10 +6,13 @@ using System.Net;
 
 namespace AndcultureCode.CSharp.Web.Extensions
 {
+    /// <summary>
+    /// Extensions for IApplicationBuilder
+    /// </summary>
     public static class IApplicationBuilderExtensions
     {
         /// <summary>
-        /// Configure dotnet core API to wrap unhandled exceptions in IResult<>
+        /// Configure dotnet core API to wrap unhandled exceptions in IResult
         /// and respond with json
         /// </summary>
         public static void UseGlobalExceptionHandler(this IApplicationBuilder app)

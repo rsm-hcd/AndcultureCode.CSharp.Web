@@ -7,6 +7,11 @@ This package is installed via NuGet
 dotnet add [<PROJECT>] package AndcultureCode.CSharp.Web
 ```
 
+## Documentation
+
+[Full API Documentation](src/AndcultureCode.CSharp.Web/AndcultureCode.CSharp.Web.md)
+
+
 ## Development Setup
 
 * Install Dotnet Core 2.x
