@@ -3,6 +3,9 @@
 
 ## Contents
 
+- [IApiEntityControllerExtensions](#T-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions 'AndcultureCode.CSharp.Web.Extensions.IApiEntityControllerExtensions')
+  - [GetDefault\`\`3(controller,id)](#M-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions-GetDefault``3-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController{``0,``1},System-Int64- 'AndcultureCode.CSharp.Web.Extensions.IApiEntityControllerExtensions.GetDefault``3(AndcultureCode.CSharp.Web.Interfaces.IApiEntityController{``0,``1},System.Int64)')
+  - [IndexDefault\`\`3(controller)](#M-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions-IndexDefault``3-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController{``0,``1}- 'AndcultureCode.CSharp.Web.Extensions.IApiEntityControllerExtensions.IndexDefault``3(AndcultureCode.CSharp.Web.Interfaces.IApiEntityController{``0,``1})')
 - [IApiEntityController\`2](#T-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController`2 'AndcultureCode.CSharp.Web.Interfaces.IApiEntityController`2')
   - [Conductor](#P-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController`2-Conductor 'AndcultureCode.CSharp.Web.Interfaces.IApiEntityController`2.Conductor')
   - [Logger](#P-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController`2-Logger 'AndcultureCode.CSharp.Web.Interfaces.IApiEntityController`2.Logger')
@@ -52,6 +55,68 @@
 - [WebConfiguration](#T-AndcultureCode-CSharp-Web-Constants-WebConfiguration 'AndcultureCode.CSharp.Web.Constants.WebConfiguration')
   - [AUTHENTICATION](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION')
   - [AUTHENTICATION_COOKIES](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_COOKIES 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION_COOKIES')
+
+<a name='T-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions'></a>
+## IApiEntityControllerExtensions `type`
+
+##### Namespace
+
+AndcultureCode.CSharp.Web.Extensions
+
+##### Summary
+
+Utility functions for IApiEntityController
+
+<a name='M-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions-GetDefault``3-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController{``0,``1},System-Int64-'></a>
+### GetDefault\`\`3(controller,id) `method`
+
+##### Summary
+
+Conventional Get(long id) controller method functionality
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| controller | [AndcultureCode.CSharp.Web.Interfaces.IApiEntityController{\`\`0,\`\`1}](#T-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController{``0,``1} 'AndcultureCode.CSharp.Web.Interfaces.IApiEntityController{``0,``1}') |  |
+| id | [System.Int64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64 'System.Int64') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| TController |  |
+| TEntity |  |
+| TDto |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions-IndexDefault``3-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController{``0,``1}-'></a>
+### IndexDefault\`\`3(controller) `method`
+
+##### Summary
+
+Conventional Index() controller method functionality
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| controller | [AndcultureCode.CSharp.Web.Interfaces.IApiEntityController{\`\`0,\`\`1}](#T-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController{``0,``1} 'AndcultureCode.CSharp.Web.Interfaces.IApiEntityController{``0,``1}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| TController |  |
+| TEntity |  |
+| TDto |  |
 
 <a name='T-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController`2'></a>
 ## IApiEntityController\`2 `type`
