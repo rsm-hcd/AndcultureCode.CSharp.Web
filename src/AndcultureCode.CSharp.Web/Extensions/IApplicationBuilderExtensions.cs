@@ -17,20 +17,17 @@ namespace AndcultureCode.CSharp.Web.Extensions
         /// </summary>
         /// <param name="app"></param>
         /// <param name="mode"></param>
-        public static void UseCookieAuthentication(this IApplicationBuilder app, SameSiteMode mode = SameSiteMode.Lax)
-        {
-            app.UseAuthentication();
-
-            app.UseCookiePolicy(new CookiePolicyOptions { MinimumSameSitePolicy = mode });
-        }
+        public static IApplicationBuilder UseCookieAuthentication(this IApplicationBuilder app, SameSiteMode mode = SameSiteMode.Lax)
+            => app
+                .UseAuthentication()
+                .UseCookiePolicy(new CookiePolicyOptions { MinimumSameSitePolicy = mode });
 
         /// <summary>
         /// Configure dotnet core API to wrap unhandled exceptions in IResult
         /// and respond with json
         /// </summary>
-        public static void UseGlobalExceptionHandler(this IApplicationBuilder app)
-        {
-            app.UseExceptionHandler(appError =>
+        public static IApplicationBuilder UseGlobalExceptionHandler(this IApplicationBuilder app)
+            => app.UseExceptionHandler(appError =>
                 appError.Run(async context =>
                 {
                     context.Response.ContentType = ContentTypes.JSON;
@@ -46,6 +43,5 @@ namespace AndcultureCode.CSharp.Web.Extensions
                     await context.Response.WriteAsync(JsonConvert.SerializeObject(result));
                 })
             );
-        }
     }
 }
