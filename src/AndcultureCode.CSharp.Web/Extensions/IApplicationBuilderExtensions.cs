@@ -27,21 +27,22 @@ namespace AndcultureCode.CSharp.Web.Extensions
         /// and respond with json
         /// </summary>
         public static IApplicationBuilder UseGlobalExceptionHandler(this IApplicationBuilder app)
-            => app.UseExceptionHandler(appError =>
-                appError.Run(async context =>
-                {
-                    context.Response.ContentType = ContentTypes.JSON;
-                    context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-
-                    var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
-                    var result = contextFeature.ToResult();
-                    if (result == null)
+            => app
+                .UseExceptionHandler(appError =>
+                    appError.Run(async context =>
                     {
-                        return;
-                    }
+                        context.Response.ContentType = ContentTypes.JSON;
+                        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-                    await context.Response.WriteAsync(JsonConvert.SerializeObject(result));
-                })
-            );
+                        var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
+                        var result = contextFeature.ToResult();
+                        if (result == null)
+                        {
+                            return;
+                        }
+
+                        await context.Response.WriteAsync(JsonConvert.SerializeObject(result));
+                    })
+                );
     }
 }

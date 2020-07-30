@@ -2,7 +2,9 @@ using System.Threading.Tasks;
 using AndcultureCode.CSharp.Business.Core.Models.Configuration;
 using AndcultureCode.CSharp.Web.Constants;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -18,7 +20,6 @@ namespace AndcultureCode.CSharp.Web.Extensions
         /// </summary>
         /// <param name="services"></param>
         /// <param name="config"></param>
-
         public static IServiceCollection AddCookieAuthentication(this IServiceCollection services, IConfigurationRoot config)
         {
             var cookieConfig = config
@@ -44,14 +45,12 @@ namespace AndcultureCode.CSharp.Web.Extensions
                 {
                     context.Response.StatusCode = 401; // Don't redirect, set to unauthorized
                     return Task.CompletedTask;
-                },
+                }
             };
 
             // Register actors
-
-            services.AddSingleton((sp) => cookieConfig);
-
             services
+                .AddSingleton((sp) => cookieConfig)
                 .AddAuthentication(cookieConfig.AuthenticationScheme)
                 .AddCookie(cookieConfig.AuthenticationScheme, options =>
                 {
@@ -63,5 +62,16 @@ namespace AndcultureCode.CSharp.Web.Extensions
 
             return services;
         }
+
+        /// <summary>
+        /// Enables HTTP Header forwarding for proxies. This is not enabled by default when hosting out of process (i.e kestrel)
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddForwardedHeaders(this IServiceCollection services)
+            => services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+            });
     }
 }
