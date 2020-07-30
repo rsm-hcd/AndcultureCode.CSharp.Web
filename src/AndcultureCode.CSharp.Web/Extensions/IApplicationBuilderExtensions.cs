@@ -1,3 +1,4 @@
+using AndcultureCode.CSharp.Core.Constants;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
@@ -12,6 +13,18 @@ namespace AndcultureCode.CSharp.Web.Extensions
     public static class IApplicationBuilderExtensions
     {
         /// <summary>
+        /// Configure application to use cookie authentication
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="mode"></param>
+        public static void UseCookieAuthentication(this IApplicationBuilder app, SameSiteMode mode = SameSiteMode.Lax)
+        {
+            app.UseAuthentication();
+
+            app.UseCookiePolicy(new CookiePolicyOptions { MinimumSameSitePolicy = mode });
+        }
+
+        /// <summary>
         /// Configure dotnet core API to wrap unhandled exceptions in IResult
         /// and respond with json
         /// </summary>
@@ -20,7 +33,7 @@ namespace AndcultureCode.CSharp.Web.Extensions
             app.UseExceptionHandler(appError =>
                 appError.Run(async context =>
                 {
-                    context.Response.ContentType = "application/json";
+                    context.Response.ContentType = ContentTypes.JSON;
                     context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
                     var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
