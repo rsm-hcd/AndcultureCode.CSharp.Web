@@ -11,8 +11,13 @@ namespace AndcultureCode.CSharp.Web.Constants
         public const string AUTHENTICATION = "Authentication";
 
         /// <summary>
+        /// Authentication's basic subsection
+        /// </summary>
+        public const string AUTHENTICATION_BASIC = "Basic";
+
+        /// <summary>
         /// Authentication's cookies subsection
         /// </summary>
-        public const string AUTHENTICATION_COOKIES = "Cookies";
+        public const string AUTHENTICATION_COOKIE = "Cookie";
     }
 }

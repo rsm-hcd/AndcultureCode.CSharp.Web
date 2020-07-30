@@ -55,7 +55,8 @@
   - [AddForwardedHeaders(services)](#M-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions-AddForwardedHeaders-Microsoft-Extensions-DependencyInjection-IServiceCollection- 'AndcultureCode.CSharp.Web.Extensions.IServiceCollectionExtensions.AddForwardedHeaders(Microsoft.Extensions.DependencyInjection.IServiceCollection)')
 - [WebConfiguration](#T-AndcultureCode-CSharp-Web-Constants-WebConfiguration 'AndcultureCode.CSharp.Web.Constants.WebConfiguration')
   - [AUTHENTICATION](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION')
-  - [AUTHENTICATION_COOKIES](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_COOKIES 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION_COOKIES')
+  - [AUTHENTICATION_BASIC](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_BASIC 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION_BASIC')
+  - [AUTHENTICATION_COOKIE](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_COOKIE 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION_COOKIE')
 
 <a name='T-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions'></a>
 ## IApiEntityControllerExtensions `type`
@@ -957,8 +958,15 @@ Identifiers used for IConfigurationRoot configured sections and values
 
 General authentication section
 
-<a name='F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_COOKIES'></a>
-### AUTHENTICATION_COOKIES `constants`
+<a name='F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_BASIC'></a>
+### AUTHENTICATION_BASIC `constants`
+
+##### Summary
+
+Authentication's basic subsection
+
+<a name='F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_COOKIE'></a>
+### AUTHENTICATION_COOKIE `constants`
 
 ##### Summary
 

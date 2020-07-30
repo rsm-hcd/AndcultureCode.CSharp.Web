@@ -24,7 +24,7 @@ namespace AndcultureCode.CSharp.Web.Extensions
         {
             var cookieConfig = config
                 .GetSection(WebConfiguration.AUTHENTICATION)
-                .GetSection(WebConfiguration.AUTHENTICATION_COOKIES)
+                .GetSection(WebConfiguration.AUTHENTICATION_COOKIE)
                 .Get<CookieAuthenticationConfiguration>();
 
             // Configuration
