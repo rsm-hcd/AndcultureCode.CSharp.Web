@@ -3,6 +3,73 @@
 
 ## Contents
 
+- [ApiClaimsPrincipal](#T-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal 'AndcultureCode.CSharp.Web.Controllers.ApiClaimsPrincipal')
+  - [IsAuthenticated](#P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-IsAuthenticated 'AndcultureCode.CSharp.Web.Controllers.ApiClaimsPrincipal.IsAuthenticated')
+  - [IsSuperAdmin](#P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-IsSuperAdmin 'AndcultureCode.CSharp.Web.Controllers.ApiClaimsPrincipal.IsSuperAdmin')
+  - [IsUnauthenticated](#P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-IsUnauthenticated 'AndcultureCode.CSharp.Web.Controllers.ApiClaimsPrincipal.IsUnauthenticated')
+  - [RoleId](#P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-RoleId 'AndcultureCode.CSharp.Web.Controllers.ApiClaimsPrincipal.RoleId')
+  - [RoleIds](#P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-RoleIds 'AndcultureCode.CSharp.Web.Controllers.ApiClaimsPrincipal.RoleIds')
+  - [UserId](#P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-UserId 'AndcultureCode.CSharp.Web.Controllers.ApiClaimsPrincipal.UserId')
+  - [UserLoginId](#P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-UserLoginId 'AndcultureCode.CSharp.Web.Controllers.ApiClaimsPrincipal.UserLoginId')
+- [ApiController\`1](#T-AndcultureCode-CSharp-Web-Controllers-ApiController`1 'AndcultureCode.CSharp.Web.Controllers.ApiController`1')
+  - [#ctor(localizer)](#M-AndcultureCode-CSharp-Web-Controllers-ApiController`1-#ctor-Microsoft-Extensions-Localization-IStringLocalizer- 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.#ctor(Microsoft.Extensions.Localization.IStringLocalizer)')
+  - [ApiClaimsPrincipal](#P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-ApiClaimsPrincipal 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.ApiClaimsPrincipal')
+  - [ApiCulture](#P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-ApiCulture 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.ApiCulture')
+  - [CurrentCulture](#P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-CurrentCulture 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.CurrentCulture')
+  - [CurrentRoleId](#P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-CurrentRoleId 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.CurrentRoleId')
+  - [CurrentRoleIds](#P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-CurrentRoleIds 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.CurrentRoleIds')
+  - [CurrentUserId](#P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-CurrentUserId 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.CurrentUserId')
+  - [CurrentUserLoginId](#P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-CurrentUserLoginId 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.CurrentUserLoginId')
+  - [IsAuthenticated](#P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-IsAuthenticated 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.IsAuthenticated')
+  - [IsSuperAdmin](#P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-IsSuperAdmin 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.IsSuperAdmin')
+  - [IsUnauthenticated](#P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-IsUnauthenticated 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.IsUnauthenticated')
+- [Controller](#T-AndcultureCode-CSharp-Web-Controllers-Controller 'AndcultureCode.CSharp.Web.Controllers.Controller')
+  - [#ctor(localizer)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-#ctor-Microsoft-Extensions-Localization-IStringLocalizer- 'AndcultureCode.CSharp.Web.Controllers.Controller.#ctor(Microsoft.Extensions.Localization.IStringLocalizer)')
+  - [ERROR_ID_MISMATCH](#F-AndcultureCode-CSharp-Web-Controllers-Controller-ERROR_ID_MISMATCH 'AndcultureCode.CSharp.Web.Controllers.Controller.ERROR_ID_MISMATCH')
+  - [ERROR_RESOURCE_NOT_FOUND](#F-AndcultureCode-CSharp-Web-Controllers-Controller-ERROR_RESOURCE_NOT_FOUND 'AndcultureCode.CSharp.Web.Controllers.Controller.ERROR_RESOURCE_NOT_FOUND')
+  - [CurrentCulture](#P-AndcultureCode-CSharp-Web-Controllers-Controller-CurrentCulture 'AndcultureCode.CSharp.Web.Controllers.Controller.CurrentCulture')
+  - [IpAddress](#P-AndcultureCode-CSharp-Web-Controllers-Controller-IpAddress 'AndcultureCode.CSharp.Web.Controllers.Controller.IpAddress')
+  - [Localizer](#P-AndcultureCode-CSharp-Web-Controllers-Controller-Localizer 'AndcultureCode.CSharp.Web.Controllers.Controller.Localizer')
+  - [UserAgent](#P-AndcultureCode-CSharp-Web-Controllers-Controller-UserAgent 'AndcultureCode.CSharp.Web.Controllers.Controller.UserAgent')
+  - [Accepted\`\`1(value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Accepted``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.Accepted``1(``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [BadRequest(key,message,type)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-BadRequest-System-String,System-String,AndcultureCode-CSharp-Core-Enumerations-ErrorType- 'AndcultureCode.CSharp.Web.Controllers.Controller.BadRequest(System.String,System.String,AndcultureCode.CSharp.Core.Enumerations.ErrorType)')
+  - [BadRequest\`\`1(errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-BadRequest``1-System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.BadRequest``1(System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [BadRequest\`\`1(value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-BadRequest``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.BadRequest``1(``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [BadRequest\`\`1(value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-BadRequest``1-``0,AndcultureCode-CSharp-Core-Interfaces-IError[]- 'AndcultureCode.CSharp.Web.Controllers.Controller.BadRequest``1(``0,AndcultureCode.CSharp.Core.Interfaces.IError[])')
+  - [BadRequest\`\`1(value,key,message,type)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-BadRequest``1-``0,System-String,System-String,AndcultureCode-CSharp-Core-Enumerations-ErrorType- 'AndcultureCode.CSharp.Web.Controllers.Controller.BadRequest``1(``0,System.String,System.String,AndcultureCode.CSharp.Core.Enumerations.ErrorType)')
+  - [Conflict\`\`1(value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Conflict``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.Conflict``1(``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [Conflict\`\`1(errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Conflict``1-System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.Conflict``1(System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [CreateResult\`\`1(value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-CreateResult``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.CreateResult``1(``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [CreatedAtAction\`\`1(actionName,routeValues,value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-CreatedAtAction``1-System-String,System-Object,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.CreatedAtAction``1(System.String,System.Object,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [CreatedAtAction\`\`1(actionName,controllerName,routeValues,value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-CreatedAtAction``1-System-String,System-String,System-Object,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.CreatedAtAction``1(System.String,System.String,System.Object,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [CreatedAtAction\`\`1(actionName,value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-CreatedAtAction``1-System-String,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.CreatedAtAction``1(System.String,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [CreatedAtRoute\`\`1(routeName,value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-CreatedAtRoute``1-System-String,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.CreatedAtRoute``1(System.String,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [CreatedAtRoute\`\`1(routeValues,value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-CreatedAtRoute``1-System-Object,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.CreatedAtRoute``1(System.Object,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [CreatedAtRoute\`\`1(routeName,routeValues,value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-CreatedAtRoute``1-System-String,System-Object,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.CreatedAtRoute``1(System.String,System.Object,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [Created\`\`1(value)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Created``1-``0- 'AndcultureCode.CSharp.Web.Controllers.Controller.Created``1(``0)')
+  - [Created\`\`1(uriIdentifier,value)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Created``1-System-Int64,``0- 'AndcultureCode.CSharp.Web.Controllers.Controller.Created``1(System.Int64,``0)')
+  - [Created\`\`1(uri,value)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Created``1-System-String,``0- 'AndcultureCode.CSharp.Web.Controllers.Controller.Created``1(System.String,``0)')
+  - [Created\`\`1(uri,value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Created``1-System-String,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.Created``1(System.String,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [Created\`\`1(uri,value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Created``1-System-Uri,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.Created``1(System.Uri,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [Forbidden\`\`1(value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Forbidden``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.Forbidden``1(``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [Forbidden\`\`1(value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Forbidden``1-``0,AndcultureCode-CSharp-Core-Interfaces-IError[]- 'AndcultureCode.CSharp.Web.Controllers.Controller.Forbidden``1(``0,AndcultureCode.CSharp.Core.Interfaces.IError[])')
+  - [Forbidden\`\`1(errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Forbidden``1-System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.Forbidden``1(System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [Forbidden\`\`1(errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Forbidden``1-AndcultureCode-CSharp-Core-Interfaces-IError[]- 'AndcultureCode.CSharp.Web.Controllers.Controller.Forbidden``1(AndcultureCode.CSharp.Core.Interfaces.IError[])')
+  - [GetIdMismatchError()](#M-AndcultureCode-CSharp-Web-Controllers-Controller-GetIdMismatchError 'AndcultureCode.CSharp.Web.Controllers.Controller.GetIdMismatchError')
+  - [GetIdMismatchError(routeParameter,dtoProperty)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-GetIdMismatchError-System-String,System-String- 'AndcultureCode.CSharp.Web.Controllers.Controller.GetIdMismatchError(System.String,System.String)')
+  - [GetNewError(key,message)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-GetNewError-System-String,System-String- 'AndcultureCode.CSharp.Web.Controllers.Controller.GetNewError(System.String,System.String)')
+  - [GetResourceNotFoundError()](#M-AndcultureCode-CSharp-Web-Controllers-Controller-GetResourceNotFoundError 'AndcultureCode.CSharp.Web.Controllers.Controller.GetResourceNotFoundError')
+  - [GetResourceNotFoundError(resourceName)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-GetResourceNotFoundError-System-String- 'AndcultureCode.CSharp.Web.Controllers.Controller.GetResourceNotFoundError(System.String)')
+  - [GetResourceNotFoundError\`\`1()](#M-AndcultureCode-CSharp-Web-Controllers-Controller-GetResourceNotFoundError``1 'AndcultureCode.CSharp.Web.Controllers.Controller.GetResourceNotFoundError``1')
+  - [InternalError\`\`1(value,errors,logger)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-InternalError``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError},Microsoft-Extensions-Logging-ILogger- 'AndcultureCode.CSharp.Web.Controllers.Controller.InternalError``1(``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError},Microsoft.Extensions.Logging.ILogger)')
+  - [InternalError\`\`1(errors,logger)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-InternalError``1-System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError},Microsoft-Extensions-Logging-ILogger- 'AndcultureCode.CSharp.Web.Controllers.Controller.InternalError``1(System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError},Microsoft.Extensions.Logging.ILogger)')
+  - [InternalError\`\`1(key,message,type,logger)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-InternalError``1-System-String,System-String,AndcultureCode-CSharp-Core-Enumerations-ErrorType,Microsoft-Extensions-Logging-ILogger- 'AndcultureCode.CSharp.Web.Controllers.Controller.InternalError``1(System.String,System.String,AndcultureCode.CSharp.Core.Enumerations.ErrorType,Microsoft.Extensions.Logging.ILogger)')
+  - [NotFound\`\`1(value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-NotFound``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.NotFound``1(``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [NotFound\`\`1(errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-NotFound``1-System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.NotFound``1(System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [NotFound\`\`1(value,key,message,type)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-NotFound``1-``0,System-String,System-String,AndcultureCode-CSharp-Core-Enumerations-ErrorType- 'AndcultureCode.CSharp.Web.Controllers.Controller.NotFound``1(``0,System.String,System.String,AndcultureCode.CSharp.Core.Enumerations.ErrorType)')
+  - [NotFound\`\`1()](#M-AndcultureCode-CSharp-Web-Controllers-Controller-NotFound``1 'AndcultureCode.CSharp.Web.Controllers.Controller.NotFound``1')
+  - [Ok\`\`1(value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.Ok``1(``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+  - [StatusCode\`\`1(statusCode,value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-StatusCode``1-System-Int32,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.StatusCode``1(System.Int32,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
 - [IApiEntityControllerExtensions](#T-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions 'AndcultureCode.CSharp.Web.Extensions.IApiEntityControllerExtensions')
   - [GetDefault\`\`3(controller,id)](#M-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions-GetDefault``3-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController{``0,``1},System-Int64- 'AndcultureCode.CSharp.Web.Extensions.IApiEntityControllerExtensions.GetDefault``3(AndcultureCode.CSharp.Web.Interfaces.IApiEntityController{``0,``1},System.Int64)')
   - [IndexDefault\`\`3(controller)](#M-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions-IndexDefault``3-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController{``0,``1}- 'AndcultureCode.CSharp.Web.Extensions.IApiEntityControllerExtensions.IndexDefault``3(AndcultureCode.CSharp.Web.Interfaces.IApiEntityController{``0,``1})')
@@ -50,6 +117,8 @@
   - [StatusCode\`\`1(statusCode,value,errors)](#M-AndcultureCode-CSharp-Web-Interfaces-IController-StatusCode``1-System-Int32,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Interfaces.IController.StatusCode``1(System.Int32,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
 - [IExceptionHandlerFeatureExtensions](#T-AndcultureCode-CSharp-Web-Extensions-IExceptionHandlerFeatureExtensions 'AndcultureCode.CSharp.Web.Extensions.IExceptionHandlerFeatureExtensions')
   - [ToResult()](#M-AndcultureCode-CSharp-Web-Extensions-IExceptionHandlerFeatureExtensions-ToResult-Microsoft-AspNetCore-Diagnostics-IExceptionHandlerFeature- 'AndcultureCode.CSharp.Web.Extensions.IExceptionHandlerFeatureExtensions.ToResult(Microsoft.AspNetCore.Diagnostics.IExceptionHandlerFeature)')
+- [ILoggerExtensions](#T-AndcultureCode-CSharp-Web-Extensions-ILoggerExtensions 'AndcultureCode.CSharp.Web.Extensions.ILoggerExtensions')
+  - [LogErrors\`\`1(logger,value,errors)](#M-AndcultureCode-CSharp-Web-Extensions-ILoggerExtensions-LogErrors``1-Microsoft-Extensions-Logging-ILogger,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Extensions.ILoggerExtensions.LogErrors``1(Microsoft.Extensions.Logging.ILogger,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
 - [IServiceCollectionExtensions](#T-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions 'AndcultureCode.CSharp.Web.Extensions.IServiceCollectionExtensions')
   - [AddCookieAuthentication(services,config)](#M-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions-AddCookieAuthentication-Microsoft-Extensions-DependencyInjection-IServiceCollection,Microsoft-Extensions-Configuration-IConfigurationRoot- 'AndcultureCode.CSharp.Web.Extensions.IServiceCollectionExtensions.AddCookieAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationRoot)')
   - [AddForwardedHeaders(services)](#M-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions-AddForwardedHeaders-Microsoft-Extensions-DependencyInjection-IServiceCollection- 'AndcultureCode.CSharp.Web.Extensions.IServiceCollectionExtensions.AddForwardedHeaders(Microsoft.Extensions.DependencyInjection.IServiceCollection)')
@@ -57,6 +126,1087 @@
   - [AUTHENTICATION](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION')
   - [AUTHENTICATION_BASIC](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_BASIC 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION_BASIC')
   - [AUTHENTICATION_COOKIE](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_COOKIE 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION_COOKIE')
+
+<a name='T-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal'></a>
+## ApiClaimsPrincipal `type`
+
+##### Namespace
+
+AndcultureCode.CSharp.Web.Controllers
+
+##### Summary
+
+Base claims principal
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-IsAuthenticated'></a>
+### IsAuthenticated `property`
+
+##### Summary
+
+Is the current request authenticated?
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-IsSuperAdmin'></a>
+### IsSuperAdmin `property`
+
+##### Summary
+
+Is the current authenticated user a super admin?
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-IsUnauthenticated'></a>
+### IsUnauthenticated `property`
+
+##### Summary
+
+Is the current request unauthenticated?
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-RoleId'></a>
+### RoleId `property`
+
+##### Summary
+
+RoleId of current user
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-RoleIds'></a>
+### RoleIds `property`
+
+##### Summary
+
+Available role ids for current user
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-UserId'></a>
+### UserId `property`
+
+##### Summary
+
+Id of current user
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal-UserLoginId'></a>
+### UserLoginId `property`
+
+##### Summary
+
+Id of current user's login session
+
+<a name='T-AndcultureCode-CSharp-Web-Controllers-ApiController`1'></a>
+## ApiController\`1 `type`
+
+##### Namespace
+
+AndcultureCode.CSharp.Web.Controllers
+
+##### Summary
+
+Controller sub-class for servicing HTTP API requests
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-ApiController`1-#ctor-Microsoft-Extensions-Localization-IStringLocalizer-'></a>
+### #ctor(localizer) `constructor`
+
+##### Summary
+
+Controller sub-class for servicing HTTP API requests
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| localizer | [Microsoft.Extensions.Localization.IStringLocalizer](#T-Microsoft-Extensions-Localization-IStringLocalizer 'Microsoft.Extensions.Localization.IStringLocalizer') |  |
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-ApiClaimsPrincipal'></a>
+### ApiClaimsPrincipal `property`
+
+##### Summary
+
+Current request's claims principal
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-ApiCulture'></a>
+### ApiCulture `property`
+
+##### Summary
+
+Current request's culture
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-CurrentCulture'></a>
+### CurrentCulture `property`
+
+##### Summary
+
+Culture of the current request
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-CurrentRoleId'></a>
+### CurrentRoleId `property`
+
+##### Summary
+
+Current authenticated user's selected role id
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-CurrentRoleIds'></a>
+### CurrentRoleIds `property`
+
+##### Summary
+
+Current authenticated user's role ids
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-CurrentUserId'></a>
+### CurrentUserId `property`
+
+##### Summary
+
+Current authenticated user's id
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-CurrentUserLoginId'></a>
+### CurrentUserLoginId `property`
+
+##### Summary
+
+Current authenticated user's UserLoginId
+
+##### Returns
+
+
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-IsAuthenticated'></a>
+### IsAuthenticated `property`
+
+##### Summary
+
+Whether the current user is authenticated
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-IsSuperAdmin'></a>
+### IsSuperAdmin `property`
+
+##### Summary
+
+Is the CurrentUser a SuperAdmin
+
+##### Returns
+
+
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-IsUnauthenticated'></a>
+### IsUnauthenticated `property`
+
+##### Summary
+
+Whether the current user is unauthenticated
+
+<a name='T-AndcultureCode-CSharp-Web-Controllers-Controller'></a>
+## Controller `type`
+
+##### Namespace
+
+AndcultureCode.CSharp.Web.Controllers
+
+##### Summary
+
+Base localized controller
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-#ctor-Microsoft-Extensions-Localization-IStringLocalizer-'></a>
+### #ctor(localizer) `constructor`
+
+##### Summary
+
+Base localized controller
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| localizer | [Microsoft.Extensions.Localization.IStringLocalizer](#T-Microsoft-Extensions-Localization-IStringLocalizer 'Microsoft.Extensions.Localization.IStringLocalizer') |  |
+
+<a name='F-AndcultureCode-CSharp-Web-Controllers-Controller-ERROR_ID_MISMATCH'></a>
+### ERROR_ID_MISMATCH `constants`
+
+##### Summary
+
+Data and route Ids do not match
+
+<a name='F-AndcultureCode-CSharp-Web-Controllers-Controller-ERROR_RESOURCE_NOT_FOUND'></a>
+### ERROR_RESOURCE_NOT_FOUND `constants`
+
+##### Summary
+
+Requested resource was not found
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-Controller-CurrentCulture'></a>
+### CurrentCulture `property`
+
+##### Summary
+
+Culture for current request
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-Controller-IpAddress'></a>
+### IpAddress `property`
+
+##### Summary
+
+Get current ip address
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-Controller-Localizer'></a>
+### Localizer `property`
+
+##### Summary
+
+Reference to localizer for sub-classes
+
+<a name='P-AndcultureCode-CSharp-Web-Controllers-Controller-UserAgent'></a>
+### UserAgent `property`
+
+##### Summary
+
+Requesting user's agent
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Accepted``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### Accepted\`\`1(value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 202 Accepted
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-BadRequest-System-String,System-String,AndcultureCode-CSharp-Core-Enumerations-ErrorType-'></a>
+### BadRequest(key,message,type) `method`
+
+##### Summary
+
+Responds with HTTP 400 Bad Request
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| key | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| message | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| type | [AndcultureCode.CSharp.Core.Enumerations.ErrorType](#T-AndcultureCode-CSharp-Core-Enumerations-ErrorType 'AndcultureCode.CSharp.Core.Enumerations.ErrorType') |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-BadRequest``1-System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### BadRequest\`\`1(errors) `method`
+
+##### Summary
+
+Responds with HTTP 400 Bad Request
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-BadRequest``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### BadRequest\`\`1(value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 400 Bad Request
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-BadRequest``1-``0,AndcultureCode-CSharp-Core-Interfaces-IError[]-'></a>
+### BadRequest\`\`1(value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 400 Bad Request
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [AndcultureCode.CSharp.Core.Interfaces.IError[]](#T-AndcultureCode-CSharp-Core-Interfaces-IError[] 'AndcultureCode.CSharp.Core.Interfaces.IError[]') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-BadRequest``1-``0,System-String,System-String,AndcultureCode-CSharp-Core-Enumerations-ErrorType-'></a>
+### BadRequest\`\`1(value,key,message,type) `method`
+
+##### Summary
+
+Responds with HTTP 400 Bad Request
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+| key | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| message | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| type | [AndcultureCode.CSharp.Core.Enumerations.ErrorType](#T-AndcultureCode-CSharp-Core-Enumerations-ErrorType 'AndcultureCode.CSharp.Core.Enumerations.ErrorType') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Conflict``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### Conflict\`\`1(value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 409 Conflicted
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Conflict``1-System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### Conflict\`\`1(errors) `method`
+
+##### Summary
+
+Responds with HTTP 409 Conflicted
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-CreateResult``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### CreateResult\`\`1(value,errors) `method`
+
+##### Summary
+
+Create a result object given the value and errors list
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-CreatedAtAction``1-System-String,System-Object,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### CreatedAtAction\`\`1(actionName,routeValues,value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 201 Created
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| actionName | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| routeValues | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-CreatedAtAction``1-System-String,System-String,System-Object,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### CreatedAtAction\`\`1(actionName,controllerName,routeValues,value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 201 Created
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| actionName | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| controllerName | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| routeValues | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-CreatedAtAction``1-System-String,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### CreatedAtAction\`\`1(actionName,value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 201 Created
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| actionName | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-CreatedAtRoute``1-System-String,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### CreatedAtRoute\`\`1(routeName,value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 201 Created
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| routeName | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-CreatedAtRoute``1-System-Object,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### CreatedAtRoute\`\`1(routeValues,value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 201 Created
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| routeValues | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-CreatedAtRoute``1-System-String,System-Object,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### CreatedAtRoute\`\`1(routeName,routeValues,value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 201 Created
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| routeName | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| routeValues | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Created``1-``0-'></a>
+### Created\`\`1(value) `method`
+
+##### Summary
+
+Responds with HTTP 201 Created
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Created``1-System-Int64,``0-'></a>
+### Created\`\`1(uriIdentifier,value) `method`
+
+##### Summary
+
+Responds with HTTP 201 Created
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| uriIdentifier | [System.Int64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64 'System.Int64') |  |
+| value | [\`\`0](#T-``0 '``0') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Created``1-System-String,``0-'></a>
+### Created\`\`1(uri,value) `method`
+
+##### Summary
+
+Responds with HTTP 201 Created
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| uri | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| value | [\`\`0](#T-``0 '``0') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Created``1-System-String,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### Created\`\`1(uri,value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 201 Created
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| uri | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Created``1-System-Uri,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### Created\`\`1(uri,value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 201 Created
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| uri | [System.Uri](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Uri 'System.Uri') |  |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Forbidden``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### Forbidden\`\`1(value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 403 Forbidden
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Forbidden``1-``0,AndcultureCode-CSharp-Core-Interfaces-IError[]-'></a>
+### Forbidden\`\`1(value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 403 Forbidden
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [AndcultureCode.CSharp.Core.Interfaces.IError[]](#T-AndcultureCode-CSharp-Core-Interfaces-IError[] 'AndcultureCode.CSharp.Core.Interfaces.IError[]') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Forbidden``1-System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### Forbidden\`\`1(errors) `method`
+
+##### Summary
+
+Responds with HTTP 403 Forbidden
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Forbidden``1-AndcultureCode-CSharp-Core-Interfaces-IError[]-'></a>
+### Forbidden\`\`1(errors) `method`
+
+##### Summary
+
+Responds with HTTP 403 Forbidden
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| errors | [AndcultureCode.CSharp.Core.Interfaces.IError[]](#T-AndcultureCode-CSharp-Core-Interfaces-IError[] 'AndcultureCode.CSharp.Core.Interfaces.IError[]') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-GetIdMismatchError'></a>
+### GetIdMismatchError() `method`
+
+##### Summary
+
+Constructors error object for ERROR_ID_MISMATCH_KEY
+
+##### Returns
+
+
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-GetIdMismatchError-System-String,System-String-'></a>
+### GetIdMismatchError(routeParameter,dtoProperty) `method`
+
+##### Summary
+
+Constructors error object for ERROR_ID_MISMATCH_KEY
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| routeParameter | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| dtoProperty | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-GetNewError-System-String,System-String-'></a>
+### GetNewError(key,message) `method`
+
+##### Summary
+
+Constructors error object
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| key | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| message | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-GetResourceNotFoundError'></a>
+### GetResourceNotFoundError() `method`
+
+##### Summary
+
+Constructors error object for ERROR_RESOURCE_NOT_FOUND_KEY
+
+##### Returns
+
+
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-GetResourceNotFoundError-System-String-'></a>
+### GetResourceNotFoundError(resourceName) `method`
+
+##### Summary
+
+Constructors error object for ERROR_RESOURCE_NOT_FOUND_KEY
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| resourceName | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-GetResourceNotFoundError``1'></a>
+### GetResourceNotFoundError\`\`1() `method`
+
+##### Summary
+
+Constructors error object for ERROR_RESOURCE_NOT_FOUND_KEY
+
+##### Returns
+
+
+
+##### Parameters
+
+This method has no parameters.
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-InternalError``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError},Microsoft-Extensions-Logging-ILogger-'></a>
+### InternalError\`\`1(value,errors,logger) `method`
+
+##### Summary
+
+Responds with HTTP 500 Internal Server Error
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+| logger | [Microsoft.Extensions.Logging.ILogger](#T-Microsoft-Extensions-Logging-ILogger 'Microsoft.Extensions.Logging.ILogger') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-InternalError``1-System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError},Microsoft-Extensions-Logging-ILogger-'></a>
+### InternalError\`\`1(errors,logger) `method`
+
+##### Summary
+
+Responds with HTTP 500 Internal Server Error
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+| logger | [Microsoft.Extensions.Logging.ILogger](#T-Microsoft-Extensions-Logging-ILogger 'Microsoft.Extensions.Logging.ILogger') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-InternalError``1-System-String,System-String,AndcultureCode-CSharp-Core-Enumerations-ErrorType,Microsoft-Extensions-Logging-ILogger-'></a>
+### InternalError\`\`1(key,message,type,logger) `method`
+
+##### Summary
+
+Responds with HTTP 500 Internal Server Error
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| key | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| message | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| type | [AndcultureCode.CSharp.Core.Enumerations.ErrorType](#T-AndcultureCode-CSharp-Core-Enumerations-ErrorType 'AndcultureCode.CSharp.Core.Enumerations.ErrorType') |  |
+| logger | [Microsoft.Extensions.Logging.ILogger](#T-Microsoft-Extensions-Logging-ILogger 'Microsoft.Extensions.Logging.ILogger') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-NotFound``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### NotFound\`\`1(value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 404 Not Found
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-NotFound``1-System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### NotFound\`\`1(errors) `method`
+
+##### Summary
+
+Responds with HTTP 404 Not Found
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-NotFound``1-``0,System-String,System-String,AndcultureCode-CSharp-Core-Enumerations-ErrorType-'></a>
+### NotFound\`\`1(value,key,message,type) `method`
+
+##### Summary
+
+Responds with HTTP 404 Not Found
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+| key | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| message | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| type | [AndcultureCode.CSharp.Core.Enumerations.ErrorType](#T-AndcultureCode-CSharp-Core-Enumerations-ErrorType 'AndcultureCode.CSharp.Core.Enumerations.ErrorType') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-NotFound``1'></a>
+### NotFound\`\`1() `method`
+
+##### Summary
+
+Responds with HTTP 404 Not Found
+
+##### Parameters
+
+This method has no parameters.
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### Ok\`\`1(value,errors) `method`
+
+##### Summary
+
+Responds with HTTP 200 Ok
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-StatusCode``1-System-Int32,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### StatusCode\`\`1(statusCode,value,errors) `method`
+
+##### Summary
+
+Responds with HTTP supplied statusCode in our conventional IResult response.
+Mostly to be used in a pinch or very edge case.
+Ultimately we should continue to extend to offer wrapper methods around
+HTTP status codes we use.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| statusCode | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') |  |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
 
 <a name='T-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions'></a>
 ## IApiEntityControllerExtensions `type`
@@ -897,6 +2047,38 @@ Transform exception context feature to IResult
 ##### Parameters
 
 This method has no parameters.
+
+<a name='T-AndcultureCode-CSharp-Web-Extensions-ILoggerExtensions'></a>
+## ILoggerExtensions `type`
+
+##### Namespace
+
+AndcultureCode.CSharp.Web.Extensions
+
+##### Summary
+
+ILogger convenience methods
+
+<a name='M-AndcultureCode-CSharp-Web-Extensions-ILoggerExtensions-LogErrors``1-Microsoft-Extensions-Logging-ILogger,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
+### LogErrors\`\`1(logger,value,errors) `method`
+
+##### Summary
+
+Logging helper method
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| logger | [Microsoft.Extensions.Logging.ILogger](#T-Microsoft-Extensions-Logging-ILogger 'Microsoft.Extensions.Logging.ILogger') |  |
+| value | [\`\`0](#T-``0 '``0') |  |
+| errors | [System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Collections.Generic.IEnumerable 'System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError}') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
 
 <a name='T-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions'></a>
 ## IServiceCollectionExtensions `type`
