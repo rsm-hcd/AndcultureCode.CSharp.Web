@@ -493,6 +493,11 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <summary>
         /// Responds with HTTP 200 Ok
         /// </summary>
+        public new OkObjectResult Ok() => Ok<object>(value: null, errors: null);
+
+        /// <summary>
+        /// Responds with HTTP 200 Ok
+        /// </summary>
         /// <param name="value"></param>
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
