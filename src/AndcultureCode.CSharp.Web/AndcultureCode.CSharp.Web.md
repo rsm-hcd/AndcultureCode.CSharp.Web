@@ -68,6 +68,7 @@
   - [NotFound\`\`1(errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-NotFound``1-System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.NotFound``1(System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
   - [NotFound\`\`1(value,key,message,type)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-NotFound``1-``0,System-String,System-String,AndcultureCode-CSharp-Core-Enumerations-ErrorType- 'AndcultureCode.CSharp.Web.Controllers.Controller.NotFound``1(``0,System.String,System.String,AndcultureCode.CSharp.Core.Enumerations.ErrorType)')
   - [NotFound\`\`1()](#M-AndcultureCode-CSharp-Web-Controllers-Controller-NotFound``1 'AndcultureCode.CSharp.Web.Controllers.Controller.NotFound``1')
+  - [Ok()](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok 'AndcultureCode.CSharp.Web.Controllers.Controller.Ok')
   - [Ok\`\`1(value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.Ok``1(``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
   - [StatusCode\`\`1(statusCode,value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-StatusCode``1-System-Int32,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.StatusCode``1(System.Int32,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
 - [IApiEntityControllerExtensions](#T-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions 'AndcultureCode.CSharp.Web.Extensions.IApiEntityControllerExtensions')
@@ -1155,6 +1156,17 @@ This method has no parameters.
 | Name | Description |
 | ---- | ----------- |
 | T |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok'></a>
+### Ok() `method`
+
+##### Summary
+
+Responds with HTTP 200 Ok
+
+##### Parameters
+
+This method has no parameters.
 
 <a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
 ### Ok\`\`1(value,errors) `method`
