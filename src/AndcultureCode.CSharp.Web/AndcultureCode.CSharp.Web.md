@@ -141,14 +141,15 @@
   - [Id](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-Id 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.Id')
   - [JobTitle](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-JobTitle 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.JobTitle')
   - [LastName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-LastName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.LastName')
+  - [Locale](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-Locale 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.Locale')
   - [MobilePhone](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-MobilePhone 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.MobilePhone')
   - [OfficeLocation](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-OfficeLocation 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.OfficeLocation')
-  - [PreferredLanguage](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-PreferredLanguage 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.PreferredLanguage')
   - [UserMetadataName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-UserMetadataName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.UserMetadataName')
 - [OAuthCreatingTicketContextExtensions](#T-AndcultureCode-GB-Presentation-Web-Extensions-OAuthCreatingTicketContextExtensions 'AndcultureCode.GB.Presentation.Web.Extensions.OAuthCreatingTicketContextExtensions')
   - [GetUser\`\`1()](#M-AndcultureCode-GB-Presentation-Web-Extensions-OAuthCreatingTicketContextExtensions-GetUser``1-Microsoft-AspNetCore-Authentication-OAuth-OAuthCreatingTicketContext- 'AndcultureCode.GB.Presentation.Web.Extensions.OAuthCreatingTicketContextExtensions.GetUser``1(Microsoft.AspNetCore.Authentication.OAuth.OAuthCreatingTicketContext)')
   - [Get\`\`1()](#M-AndcultureCode-GB-Presentation-Web-Extensions-OAuthCreatingTicketContextExtensions-Get``1-Microsoft-AspNetCore-Authentication-OAuth-OAuthCreatingTicketContext- 'AndcultureCode.GB.Presentation.Web.Extensions.OAuthCreatingTicketContextExtensions.Get``1(Microsoft.AspNetCore.Authentication.OAuth.OAuthCreatingTicketContext)')
 - [OAuthHandler\`4](#T-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4 'AndcultureCode.CSharp.Web.Middleware.OAuthHandler`4')
+  - [FindUserByOAuthUser(userConductor,metadataConductor,oauthUser)](#M-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4-FindUserByOAuthUser-AndcultureCode-CSharp-Core-Interfaces-Conductors-IRepositoryConductor{`1},AndcultureCode-CSharp-Core-Interfaces-Conductors-IRepositoryConductor{`3},AndcultureCode-CSharp-Core-Interfaces-Authentication-IOAuthUser- 'AndcultureCode.CSharp.Web.Middleware.OAuthHandler`4.FindUserByOAuthUser(AndcultureCode.CSharp.Core.Interfaces.Conductors.IRepositoryConductor{`1},AndcultureCode.CSharp.Core.Interfaces.Conductors.IRepositoryConductor{`3},AndcultureCode.CSharp.Core.Interfaces.Authentication.IOAuthUser)')
   - [HandleCreatingTicket()](#M-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4-HandleCreatingTicket-Microsoft-AspNetCore-Authentication-OAuth-OAuthCreatingTicketContext,AndcultureCode-CSharp-Web-Middleware-OAuthHandler{`0,`1,`2,`3}-GetClaimsCallback- 'AndcultureCode.CSharp.Web.Middleware.OAuthHandler`4.HandleCreatingTicket(Microsoft.AspNetCore.Authentication.OAuth.OAuthCreatingTicketContext,AndcultureCode.CSharp.Web.Middleware.OAuthHandler{`0,`1,`2,`3}.GetClaimsCallback)')
 - [WebConfiguration](#T-AndcultureCode-CSharp-Web-Constants-WebConfiguration 'AndcultureCode.CSharp.Web.Constants.WebConfiguration')
   - [AUTHENTICATION](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION')
@@ -2325,6 +2326,13 @@ Job title
 
 Surname / Lastname
 
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-Locale'></a>
+### Locale `property`
+
+##### Summary
+
+RFC-4646 locale string (en-US)
+
 <a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-MobilePhone'></a>
 ### MobilePhone `property`
 
@@ -2338,13 +2346,6 @@ Cell phone number
 ##### Summary
 
 Office address
-
-<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-PreferredLanguage'></a>
-### PreferredLanguage `property`
-
-##### Summary
-
-RFC-4646 locale string (en-US)
 
 <a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-UserMetadataName'></a>
 ### UserMetadataName `property`
@@ -2396,6 +2397,25 @@ AndcultureCode.CSharp.Web.Middleware
 ##### Summary
 
 Middleware event handlers for OAuth Accounts
+
+<a name='M-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4-FindUserByOAuthUser-AndcultureCode-CSharp-Core-Interfaces-Conductors-IRepositoryConductor{`1},AndcultureCode-CSharp-Core-Interfaces-Conductors-IRepositoryConductor{`3},AndcultureCode-CSharp-Core-Interfaces-Authentication-IOAuthUser-'></a>
+### FindUserByOAuthUser(userConductor,metadataConductor,oauthUser) `method`
+
+##### Summary
+
+Attempt to locate an application user that matches the incoming oauth provider's user
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| userConductor | [AndcultureCode.CSharp.Core.Interfaces.Conductors.IRepositoryConductor{\`1}](#T-AndcultureCode-CSharp-Core-Interfaces-Conductors-IRepositoryConductor{`1} 'AndcultureCode.CSharp.Core.Interfaces.Conductors.IRepositoryConductor{`1}') |  |
+| metadataConductor | [AndcultureCode.CSharp.Core.Interfaces.Conductors.IRepositoryConductor{\`3}](#T-AndcultureCode-CSharp-Core-Interfaces-Conductors-IRepositoryConductor{`3} 'AndcultureCode.CSharp.Core.Interfaces.Conductors.IRepositoryConductor{`3}') |  |
+| oauthUser | [AndcultureCode.CSharp.Core.Interfaces.Authentication.IOAuthUser](#T-AndcultureCode-CSharp-Core-Interfaces-Authentication-IOAuthUser 'AndcultureCode.CSharp.Core.Interfaces.Authentication.IOAuthUser') |  |
 
 <a name='M-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4-HandleCreatingTicket-Microsoft-AspNetCore-Authentication-OAuth-OAuthCreatingTicketContext,AndcultureCode-CSharp-Web-Middleware-OAuthHandler{`0,`1,`2,`3}-GetClaimsCallback-'></a>
 ### HandleCreatingTicket() `method`
@@ -2467,4 +2487,4 @@ Authentication's microsoft oauth subsection
 
 ##### Summary
 
-Authentication's microsoft oauth subsection
+Authentication's twitter oauth subsection

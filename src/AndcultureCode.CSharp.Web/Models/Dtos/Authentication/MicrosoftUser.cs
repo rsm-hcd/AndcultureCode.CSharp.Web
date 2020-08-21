@@ -49,6 +49,12 @@ namespace AndcultureCode.CSharp.Web.Models.Dtos.Authentication
         public string LastName { get; set; }
 
         /// <summary>
+        /// RFC-4646 locale string (en-US)
+        /// </summary>
+        [JsonPropertyName("preferredLanguage")]
+        public string Locale { get; set; }
+
+        /// <summary>
         /// Cell phone number
         /// </summary>
         public string MobilePhone { get; set; }
@@ -57,11 +63,6 @@ namespace AndcultureCode.CSharp.Web.Models.Dtos.Authentication
         /// Office address
         /// </summary>
         public object OfficeLocation { get; set; }
-
-        /// <summary>
-        /// RFC-4646 locale string (en-US)
-        /// </summary>
-        public string PreferredLanguage { get; set; }
 
         /// <summary>
         /// Which UserMetadata.Name is associated for this OAuth User type

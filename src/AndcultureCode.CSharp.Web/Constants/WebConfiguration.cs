@@ -36,7 +36,7 @@ namespace AndcultureCode.CSharp.Web.Constants
         public const string AUTHENTICATION_MICROSOFT = "Microsoft";
 
         /// <summary>
-        /// Authentication's microsoft oauth subsection
+        /// Authentication's twitter oauth subsection
         /// </summary>
         public const string AUTHENTICATION_TWITTER = "Twitter";
     }

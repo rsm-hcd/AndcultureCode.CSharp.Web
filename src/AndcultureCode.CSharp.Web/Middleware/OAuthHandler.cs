@@ -50,7 +50,7 @@ namespace AndcultureCode.CSharp.Web.Middleware
             var userConductor = context.Get<IRepositoryConductor<TUser>>();
             var userLoginConductor = context.Get<IRepositoryConductor<TUserLogin>>();
 
-            logger.LogInformation($"Authentication request for {oauthUser.UserMetadataName} {NameOf<TUser>()} '{oauthUser.Id}' - {oauthUser.Email}");
+            logger.LogInformation($"Authentication request for {oauthUser.UserMetadataName} {nameof(TUser)} '{oauthUser.Id}' - {oauthUser.Email}");
 
             var user = FindOrCreateUser(oauthUser, userConductor, metadataConductor, logger);
             var userLogin = CreateLogin(userLoginConductor, user, context.Request, logger);
@@ -81,7 +81,7 @@ namespace AndcultureCode.CSharp.Web.Middleware
 
             var userLogin = CreateOrThrow(conductor, newUserLogin);
 
-            logger.LogInformation($"Created {NameOf<TUserLogin>()} '{userLogin.Id}' for {NameOf<TUser>()} '{user.Id}'");
+            logger.LogInformation($"Created {nameof(TUserLogin)} '{userLogin.Id}' for {nameof(TUser)} '{user.Id}'");
 
             return userLogin;
         }
@@ -124,7 +124,7 @@ namespace AndcultureCode.CSharp.Web.Middleware
             user = CreateUser(conductor, oauthUser);
             CreateMetadata(metadataConductor, user.Id, oauthUser);
 
-            logger.LogInformation($"Created new {NameOf<TUser>()} '{user.Id}' for {oauthUser.UserMetadataName} {NameOf<TOAuthUser>()} '{oauthUser.Id}'");
+            logger.LogInformation($"Created new {nameof(TUser)} '{user.Id}' for {oauthUser.UserMetadataName} {nameof(TOAuthUser)} '{oauthUser.Id}'");
 
             return user;
         }
@@ -143,7 +143,7 @@ namespace AndcultureCode.CSharp.Web.Middleware
                     e.Name == oauthUser.UserMetadataName &&
                     e.Type == UserMetadataTypes.ExternalUserId &&
                     e.Value == oauthUser.Id,
-                    includeProperties: "User"
+                    includeProperties: nameof(IUserMetadata.User)
                 )
                 .ThrowIfAnyErrors()
                 .ResultObject;
@@ -151,6 +151,13 @@ namespace AndcultureCode.CSharp.Web.Middleware
             return externalIdMetadataResult.FirstOrDefault()?.User as TUser;
         }
 
+        /// <summary>
+        /// Attempt to locate an application user that matches the incoming oauth provider's user
+        /// </summary>
+        /// <param name="userConductor"></param>
+        /// <param name="metadataConductor"></param>
+        /// <param name="oauthUser"></param>
+        /// <returns></returns>
         private static TUser FindUserByOAuthUser(
             IRepositoryConductor<TUser> userConductor,
             IRepositoryConductor<TUserMetadata> metadataConductor,
@@ -183,8 +190,6 @@ namespace AndcultureCode.CSharp.Web.Middleware
             LastName = oauthUser.LastName,
             UserName = oauthUser.Email
         };
-
-        private static string NameOf<T>() => typeof(T).Name;
 
         #endregion Private Methods
     }
