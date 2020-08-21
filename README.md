@@ -9,8 +9,8 @@ dotnet add [<PROJECT>] package AndcultureCode.CSharp.Web
 
 ## Documentation
 
-[Full API Documentation](src/AndcultureCode.CSharp.Web/AndcultureCode.CSharp.Web.md)
-
+- [Full API Documentation](src/AndcultureCode.CSharp.Web/AndcultureCode.CSharp.Web.md)
+- [Authentication](./documentation/authentication.md)
 
 ## Development Setup
 
@@ -43,3 +43,4 @@ Contributing
 ======
 
 Information on contributing to this repo is in the [Contributing Guide](CONTRIBUTING.md)
+

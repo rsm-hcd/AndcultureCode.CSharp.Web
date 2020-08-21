@@ -69,8 +69,18 @@
   - [NotFound\`\`1(value,key,message,type)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-NotFound``1-``0,System-String,System-String,AndcultureCode-CSharp-Core-Enumerations-ErrorType- 'AndcultureCode.CSharp.Web.Controllers.Controller.NotFound``1(``0,System.String,System.String,AndcultureCode.CSharp.Core.Enumerations.ErrorType)')
   - [NotFound\`\`1()](#M-AndcultureCode-CSharp-Web-Controllers-Controller-NotFound``1 'AndcultureCode.CSharp.Web.Controllers.Controller.NotFound``1')
   - [Ok()](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok 'AndcultureCode.CSharp.Web.Controllers.Controller.Ok')
+  - [Ok\`\`1(value)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok``1-``0- 'AndcultureCode.CSharp.Web.Controllers.Controller.Ok``1(``0)')
   - [Ok\`\`1(value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.Ok``1(``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
   - [StatusCode\`\`1(statusCode,value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-StatusCode``1-System-Int32,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.StatusCode``1(System.Int32,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+- [GetClaimsCallback](#T-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4-GetClaimsCallback 'AndcultureCode.CSharp.Web.Middleware.OAuthHandler`4.GetClaimsCallback')
+- [GoogleUser](#T-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser')
+  - [Email](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Email 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.Email')
+  - [FirstName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-FirstName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.FirstName')
+  - [Id](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Id 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.Id')
+  - [LastName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-LastName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.LastName')
+  - [Locale](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Locale 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.Locale')
+  - [Name](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Name 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.Name')
+  - [UserMetadataName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-UserMetadataName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.UserMetadataName')
 - [IApiEntityControllerExtensions](#T-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions 'AndcultureCode.CSharp.Web.Extensions.IApiEntityControllerExtensions')
   - [GetDefault\`\`3(controller,id)](#M-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions-GetDefault``3-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController{``0,``1},System-Int64- 'AndcultureCode.CSharp.Web.Extensions.IApiEntityControllerExtensions.GetDefault``3(AndcultureCode.CSharp.Web.Interfaces.IApiEntityController{``0,``1},System.Int64)')
   - [IndexDefault\`\`3(controller)](#M-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions-IndexDefault``3-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController{``0,``1}- 'AndcultureCode.CSharp.Web.Extensions.IApiEntityControllerExtensions.IndexDefault``3(AndcultureCode.CSharp.Web.Interfaces.IApiEntityController{``0,``1})')
@@ -121,12 +131,34 @@
 - [ILoggerExtensions](#T-AndcultureCode-CSharp-Web-Extensions-ILoggerExtensions 'AndcultureCode.CSharp.Web.Extensions.ILoggerExtensions')
   - [LogErrors\`\`1(logger,value,errors)](#M-AndcultureCode-CSharp-Web-Extensions-ILoggerExtensions-LogErrors``1-Microsoft-Extensions-Logging-ILogger,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Extensions.ILoggerExtensions.LogErrors``1(Microsoft.Extensions.Logging.ILogger,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
 - [IServiceCollectionExtensions](#T-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions 'AndcultureCode.CSharp.Web.Extensions.IServiceCollectionExtensions')
-  - [AddCookieAuthentication(services,config)](#M-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions-AddCookieAuthentication-Microsoft-Extensions-DependencyInjection-IServiceCollection,Microsoft-Extensions-Configuration-IConfigurationRoot- 'AndcultureCode.CSharp.Web.Extensions.IServiceCollectionExtensions.AddCookieAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationRoot)')
+  - [AddCookieAuthentication(services,configRoot,mode)](#M-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions-AddCookieAuthentication-Microsoft-Extensions-DependencyInjection-IServiceCollection,Microsoft-Extensions-Configuration-IConfigurationRoot,Microsoft-AspNetCore-Http-SameSiteMode- 'AndcultureCode.CSharp.Web.Extensions.IServiceCollectionExtensions.AddCookieAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationRoot,Microsoft.AspNetCore.Http.SameSiteMode)')
   - [AddForwardedHeaders(services)](#M-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions-AddForwardedHeaders-Microsoft-Extensions-DependencyInjection-IServiceCollection- 'AndcultureCode.CSharp.Web.Extensions.IServiceCollectionExtensions.AddForwardedHeaders(Microsoft.Extensions.DependencyInjection.IServiceCollection)')
+- [MicrosoftUser](#T-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser')
+  - [BusinessPhones](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-BusinessPhones 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.BusinessPhones')
+  - [DisplayName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-DisplayName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.DisplayName')
+  - [Email](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-Email 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.Email')
+  - [FirstName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-FirstName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.FirstName')
+  - [Id](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-Id 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.Id')
+  - [JobTitle](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-JobTitle 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.JobTitle')
+  - [LastName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-LastName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.LastName')
+  - [Locale](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-Locale 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.Locale')
+  - [MobilePhone](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-MobilePhone 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.MobilePhone')
+  - [OfficeLocation](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-OfficeLocation 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.OfficeLocation')
+  - [UserMetadataName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-UserMetadataName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.UserMetadataName')
+- [OAuthCreatingTicketContextExtensions](#T-AndcultureCode-GB-Presentation-Web-Extensions-OAuthCreatingTicketContextExtensions 'AndcultureCode.GB.Presentation.Web.Extensions.OAuthCreatingTicketContextExtensions')
+  - [GetUser\`\`1()](#M-AndcultureCode-GB-Presentation-Web-Extensions-OAuthCreatingTicketContextExtensions-GetUser``1-Microsoft-AspNetCore-Authentication-OAuth-OAuthCreatingTicketContext- 'AndcultureCode.GB.Presentation.Web.Extensions.OAuthCreatingTicketContextExtensions.GetUser``1(Microsoft.AspNetCore.Authentication.OAuth.OAuthCreatingTicketContext)')
+  - [Get\`\`1()](#M-AndcultureCode-GB-Presentation-Web-Extensions-OAuthCreatingTicketContextExtensions-Get``1-Microsoft-AspNetCore-Authentication-OAuth-OAuthCreatingTicketContext- 'AndcultureCode.GB.Presentation.Web.Extensions.OAuthCreatingTicketContextExtensions.Get``1(Microsoft.AspNetCore.Authentication.OAuth.OAuthCreatingTicketContext)')
+- [OAuthHandler\`4](#T-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4 'AndcultureCode.CSharp.Web.Middleware.OAuthHandler`4')
+  - [FindUserByOAuthUser(userConductor,metadataConductor,oauthUser)](#M-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4-FindUserByOAuthUser-AndcultureCode-CSharp-Core-Interfaces-Conductors-IRepositoryConductor{`1},AndcultureCode-CSharp-Core-Interfaces-Conductors-IRepositoryConductor{`3},AndcultureCode-CSharp-Core-Interfaces-Authentication-IOAuthUser- 'AndcultureCode.CSharp.Web.Middleware.OAuthHandler`4.FindUserByOAuthUser(AndcultureCode.CSharp.Core.Interfaces.Conductors.IRepositoryConductor{`1},AndcultureCode.CSharp.Core.Interfaces.Conductors.IRepositoryConductor{`3},AndcultureCode.CSharp.Core.Interfaces.Authentication.IOAuthUser)')
+  - [HandleCreatingTicket()](#M-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4-HandleCreatingTicket-Microsoft-AspNetCore-Authentication-OAuth-OAuthCreatingTicketContext,AndcultureCode-CSharp-Web-Middleware-OAuthHandler{`0,`1,`2,`3}-GetClaimsCallback- 'AndcultureCode.CSharp.Web.Middleware.OAuthHandler`4.HandleCreatingTicket(Microsoft.AspNetCore.Authentication.OAuth.OAuthCreatingTicketContext,AndcultureCode.CSharp.Web.Middleware.OAuthHandler{`0,`1,`2,`3}.GetClaimsCallback)')
 - [WebConfiguration](#T-AndcultureCode-CSharp-Web-Constants-WebConfiguration 'AndcultureCode.CSharp.Web.Constants.WebConfiguration')
   - [AUTHENTICATION](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION')
   - [AUTHENTICATION_BASIC](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_BASIC 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION_BASIC')
   - [AUTHENTICATION_COOKIE](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_COOKIE 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION_COOKIE')
+  - [AUTHENTICATION_FACEBOOK](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_FACEBOOK 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION_FACEBOOK')
+  - [AUTHENTICATION_GOOGLE](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_GOOGLE 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION_GOOGLE')
+  - [AUTHENTICATION_MICROSOFT](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_MICROSOFT 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION_MICROSOFT')
+  - [AUTHENTICATION_TWITTER](#F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_TWITTER 'AndcultureCode.CSharp.Web.Constants.WebConfiguration.AUTHENTICATION_TWITTER')
 
 <a name='T-AndcultureCode-CSharp-Web-Controllers-ApiClaimsPrincipal'></a>
 ## ApiClaimsPrincipal `type`
@@ -1168,6 +1200,25 @@ Responds with HTTP 200 Ok
 
 This method has no parameters.
 
+<a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok``1-``0-'></a>
+### Ok\`\`1(value) `method`
+
+##### Summary
+
+Responds with HTTP 200 Ok
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| value | [\`\`0](#T-``0 '``0') |  |
+
+##### Generic Types
+
+| Name | Description |
+| ---- | ----------- |
+| T |  |
+
 <a name='M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}-'></a>
 ### Ok\`\`1(value,errors) `method`
 
@@ -1219,6 +1270,81 @@ HTTP status codes we use.
 | Name | Description |
 | ---- | ----------- |
 | T |  |
+
+<a name='T-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4-GetClaimsCallback'></a>
+## GetClaimsCallback `type`
+
+##### Namespace
+
+AndcultureCode.CSharp.Web.Middleware.OAuthHandler`4
+
+##### Summary
+
+Requests custom application claims for the user at the correct time in the lifecycle of the handler
+
+##### Returns
+
+
+
+<a name='T-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser'></a>
+## GoogleUser `type`
+
+##### Namespace
+
+AndcultureCode.CSharp.Web.Models.Dtos.Authentication
+
+##### Summary
+
+Data transfer object for google user account
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Email'></a>
+### Email `property`
+
+##### Summary
+
+Email address
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-FirstName'></a>
+### FirstName `property`
+
+##### Summary
+
+Given name / First name
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Id'></a>
+### Id `property`
+
+##### Summary
+
+Uniquely assigned identifier from external oauth provider
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-LastName'></a>
+### LastName `property`
+
+##### Summary
+
+Surname / Lastname
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Locale'></a>
+### Locale `property`
+
+##### Summary
+
+RFC-4646 locale string (en-US)
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Name'></a>
+### Name `property`
+
+##### Summary
+
+Display name of user
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-UserMetadataName'></a>
+### UserMetadataName `property`
+
+##### Summary
+
+Which UserMetadata.Name is associated for this OAuth User type
 
 <a name='T-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions'></a>
 ## IApiEntityControllerExtensions `type`
@@ -2103,8 +2229,8 @@ AndcultureCode.CSharp.Web.Extensions
 
 Presentation.Web layer dependency registry methods
 
-<a name='M-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions-AddCookieAuthentication-Microsoft-Extensions-DependencyInjection-IServiceCollection,Microsoft-Extensions-Configuration-IConfigurationRoot-'></a>
-### AddCookieAuthentication(services,config) `method`
+<a name='M-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions-AddCookieAuthentication-Microsoft-Extensions-DependencyInjection-IServiceCollection,Microsoft-Extensions-Configuration-IConfigurationRoot,Microsoft-AspNetCore-Http-SameSiteMode-'></a>
+### AddCookieAuthentication(services,configRoot,mode) `method`
 
 ##### Summary
 
@@ -2115,7 +2241,13 @@ Register cookie authentication related actors
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | services | [Microsoft.Extensions.DependencyInjection.IServiceCollection](#T-Microsoft-Extensions-DependencyInjection-IServiceCollection 'Microsoft.Extensions.DependencyInjection.IServiceCollection') |  |
-| config | [Microsoft.Extensions.Configuration.IConfigurationRoot](#T-Microsoft-Extensions-Configuration-IConfigurationRoot 'Microsoft.Extensions.Configuration.IConfigurationRoot') |  |
+| configRoot | [Microsoft.Extensions.Configuration.IConfigurationRoot](#T-Microsoft-Extensions-Configuration-IConfigurationRoot 'Microsoft.Extensions.Configuration.IConfigurationRoot') |  |
+| mode | [Microsoft.AspNetCore.Http.SameSiteMode](#T-Microsoft-AspNetCore-Http-SameSiteMode 'Microsoft.AspNetCore.Http.SameSiteMode') |  |
+
+##### Remarks
+
+Remember to configure 'UseCookieAuthentication()' and 'UseAuthorization()'
+after 'UseRouting()', but before 'UseEndpoints()'
 
 <a name='M-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions-AddForwardedHeaders-Microsoft-Extensions-DependencyInjection-IServiceCollection-'></a>
 ### AddForwardedHeaders(services) `method`
@@ -2133,6 +2265,169 @@ Enables HTTP Header forwarding for proxies. This is not enabled by default when 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | services | [Microsoft.Extensions.DependencyInjection.IServiceCollection](#T-Microsoft-Extensions-DependencyInjection-IServiceCollection 'Microsoft.Extensions.DependencyInjection.IServiceCollection') |  |
+
+<a name='T-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser'></a>
+## MicrosoftUser `type`
+
+##### Namespace
+
+AndcultureCode.CSharp.Web.Models.Dtos.Authentication
+
+##### Summary
+
+Data transfer object for microsoft user account
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-BusinessPhones'></a>
+### BusinessPhones `property`
+
+##### Summary
+
+List of business phones
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-DisplayName'></a>
+### DisplayName `property`
+
+##### Summary
+
+General 'name'
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-Email'></a>
+### Email `property`
+
+##### Summary
+
+Email address
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-FirstName'></a>
+### FirstName `property`
+
+##### Summary
+
+Given name / First name
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-Id'></a>
+### Id `property`
+
+##### Summary
+
+Unique external user identifier (guid)
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-JobTitle'></a>
+### JobTitle `property`
+
+##### Summary
+
+Job title
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-LastName'></a>
+### LastName `property`
+
+##### Summary
+
+Surname / Lastname
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-Locale'></a>
+### Locale `property`
+
+##### Summary
+
+RFC-4646 locale string (en-US)
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-MobilePhone'></a>
+### MobilePhone `property`
+
+##### Summary
+
+Cell phone number
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-OfficeLocation'></a>
+### OfficeLocation `property`
+
+##### Summary
+
+Office address
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-UserMetadataName'></a>
+### UserMetadataName `property`
+
+##### Summary
+
+Which UserMetadata.Name is associated for this OAuth User type
+
+<a name='T-AndcultureCode-GB-Presentation-Web-Extensions-OAuthCreatingTicketContextExtensions'></a>
+## OAuthCreatingTicketContextExtensions `type`
+
+##### Namespace
+
+AndcultureCode.GB.Presentation.Web.Extensions
+
+##### Summary
+
+Extension methods for OAuth context for successful login
+
+<a name='M-AndcultureCode-GB-Presentation-Web-Extensions-OAuthCreatingTicketContextExtensions-GetUser``1-Microsoft-AspNetCore-Authentication-OAuth-OAuthCreatingTicketContext-'></a>
+### GetUser\`\`1() `method`
+
+##### Summary
+
+Request associated user information from configured OAuth UserInformation endpoint
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-AndcultureCode-GB-Presentation-Web-Extensions-OAuthCreatingTicketContextExtensions-Get``1-Microsoft-AspNetCore-Authentication-OAuth-OAuthCreatingTicketContext-'></a>
+### Get\`\`1() `method`
+
+##### Summary
+
+Get dependency injected resources
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='T-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4'></a>
+## OAuthHandler\`4 `type`
+
+##### Namespace
+
+AndcultureCode.CSharp.Web.Middleware
+
+##### Summary
+
+Middleware event handlers for OAuth Accounts
+
+<a name='M-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4-FindUserByOAuthUser-AndcultureCode-CSharp-Core-Interfaces-Conductors-IRepositoryConductor{`1},AndcultureCode-CSharp-Core-Interfaces-Conductors-IRepositoryConductor{`3},AndcultureCode-CSharp-Core-Interfaces-Authentication-IOAuthUser-'></a>
+### FindUserByOAuthUser(userConductor,metadataConductor,oauthUser) `method`
+
+##### Summary
+
+Attempt to locate an application user that matches the incoming oauth provider's user
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| userConductor | [AndcultureCode.CSharp.Core.Interfaces.Conductors.IRepositoryConductor{\`1}](#T-AndcultureCode-CSharp-Core-Interfaces-Conductors-IRepositoryConductor{`1} 'AndcultureCode.CSharp.Core.Interfaces.Conductors.IRepositoryConductor{`1}') |  |
+| metadataConductor | [AndcultureCode.CSharp.Core.Interfaces.Conductors.IRepositoryConductor{\`3}](#T-AndcultureCode-CSharp-Core-Interfaces-Conductors-IRepositoryConductor{`3} 'AndcultureCode.CSharp.Core.Interfaces.Conductors.IRepositoryConductor{`3}') |  |
+| oauthUser | [AndcultureCode.CSharp.Core.Interfaces.Authentication.IOAuthUser](#T-AndcultureCode-CSharp-Core-Interfaces-Authentication-IOAuthUser 'AndcultureCode.CSharp.Core.Interfaces.Authentication.IOAuthUser') |  |
+
+<a name='M-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4-HandleCreatingTicket-Microsoft-AspNetCore-Authentication-OAuth-OAuthCreatingTicketContext,AndcultureCode-CSharp-Web-Middleware-OAuthHandler{`0,`1,`2,`3}-GetClaimsCallback-'></a>
+### HandleCreatingTicket() `method`
+
+##### Summary
+
+OAuth 'OnCreatingTicket' Handler
+Executed upon a successful external login.
+
+##### Parameters
+
+This method has no parameters.
 
 <a name='T-AndcultureCode-CSharp-Web-Constants-WebConfiguration'></a>
 ## WebConfiguration `type`
@@ -2165,3 +2460,31 @@ Authentication's basic subsection
 ##### Summary
 
 Authentication's cookies subsection
+
+<a name='F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_FACEBOOK'></a>
+### AUTHENTICATION_FACEBOOK `constants`
+
+##### Summary
+
+Authentication's facebook oauth subsection
+
+<a name='F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_GOOGLE'></a>
+### AUTHENTICATION_GOOGLE `constants`
+
+##### Summary
+
+Authentication's google oauth subsection
+
+<a name='F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_MICROSOFT'></a>
+### AUTHENTICATION_MICROSOFT `constants`
+
+##### Summary
+
+Authentication's microsoft oauth subsection
+
+<a name='F-AndcultureCode-CSharp-Web-Constants-WebConfiguration-AUTHENTICATION_TWITTER'></a>
+### AUTHENTICATION_TWITTER `constants`
+
+##### Summary
+
+Authentication's twitter oauth subsection

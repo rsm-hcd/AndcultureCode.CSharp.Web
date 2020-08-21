@@ -91,53 +91,13 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// Get current ip address
         /// </summary>
         /// <value></value>
-        public virtual string IpAddress
-        {
-            get
-            {
-                var headers = Request?.Headers;
-                if (headers == null)
-                {
-                    return string.Empty;
-                }
-
-                if (headers.ContainsKey(HttpHeaders.X_FORWARDED_FOR) && !string.IsNullOrWhiteSpace(headers[HttpHeaders.X_FORWARDED_FOR]))
-                {
-                    return headers[HttpHeaders.X_FORWARDED_FOR];
-                }
-
-                var forwardedIp = Request.GetForwardedIpAddress();
-                if (string.IsNullOrWhiteSpace(forwardedIp))
-                {
-                    return string.Empty;
-                }
-
-                return forwardedIp;
-            }
-        }
+        public virtual string IpAddress { get => Request?.GetIpAddress(); }
 
         /// <summary>
         /// Requesting user's agent
         /// </summary>
         /// <value></value>
-        protected string UserAgent
-        {
-            get
-            {
-                if (Request == null || Request.Headers == null || !Request.Headers.ContainsKey(HeaderNames.UserAgent))
-                {
-                    return string.Empty;
-                }
-
-                var userAgent = Request.Headers[HeaderNames.UserAgent];
-                if (string.IsNullOrWhiteSpace(userAgent))
-                {
-                    return string.Empty;
-                }
-
-                return userAgent;
-            }
-        }
+        protected string UserAgent { get => Request?.GetUserAgent(); }
 
         #endregion Public Properties
 
@@ -493,7 +453,14 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <summary>
         /// Responds with HTTP 200 Ok
         /// </summary>
-        public new OkObjectResult Ok() => Ok<object>(value: null, errors: null);
+        public new OkObjectResult Ok() => Ok<object>(value: null);
+
+        /// <summary>
+        /// Responds with HTTP 200 Ok
+        /// </summary>
+        /// <param name="value"></param>
+        /// <typeparam name="T"></typeparam>
+        public OkObjectResult Ok<T>(T value) => Ok<T>(value: value, errors: null);
 
         /// <summary>
         /// Responds with HTTP 200 Ok
