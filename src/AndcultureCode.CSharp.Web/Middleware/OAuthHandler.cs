@@ -166,7 +166,7 @@ namespace AndcultureCode.CSharp.Web.Middleware
             IOAuthUser oauthUser
         )
         {
-            // Match by Google External Id
+            // Match by OAuth External Id
             var user = FindUserByMetadata(metadataConductor, oauthUser);
             if (user != null)
             {
@@ -176,7 +176,7 @@ namespace AndcultureCode.CSharp.Web.Middleware
             // Match by email address
             user = FindUserByEmail(userConductor, oauthUser.Email);
 
-            // Connect user to Google External Id for future requests
+            // Connect user to OAuth External Id for future requests
             if (user != null)
             {
                 CreateMetadata(metadataConductor, user.Id, oauthUser);
