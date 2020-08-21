@@ -19,5 +19,25 @@ namespace AndcultureCode.CSharp.Web.Constants
         /// Authentication's cookies subsection
         /// </summary>
         public const string AUTHENTICATION_COOKIE = "Cookie";
+
+        /// <summary>
+        /// Authentication's google oauth subsection
+        /// </summary>
+        public const string AUTHENTICATION_GOOGLE = "Google";
+
+        /// <summary>
+        /// Authentication's facebook oauth subsection
+        /// </summary>
+        public const string AUTHENTICATION_FACEBOOK = "Facebook";
+
+        /// <summary>
+        /// Authentication's microsoft oauth subsection
+        /// </summary>
+        public const string AUTHENTICATION_MICROSOFT = "Microsoft";
+
+        /// <summary>
+        /// Authentication's microsoft oauth subsection
+        /// </summary>
+        public const string AUTHENTICATION_TWITTER = "Twitter";
     }
 }

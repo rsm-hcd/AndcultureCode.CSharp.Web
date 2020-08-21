@@ -1,6 +1,8 @@
+using System;
 using System.Threading.Tasks;
 using AndcultureCode.CSharp.Business.Core.Models.Configuration;
 using AndcultureCode.CSharp.Web.Constants;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -18,20 +20,34 @@ namespace AndcultureCode.CSharp.Web.Extensions
         /// <summary>
         /// Register cookie authentication related actors
         /// </summary>
+        /// <remarks>
+        /// Remember to configure 'UseCookieAuthentication()' and 'UseAuthorization()'
+        /// after 'UseRouting()', but before 'UseEndpoints()'
+        /// </remarks>
         /// <param name="services"></param>
-        /// <param name="config"></param>
-        public static IServiceCollection AddCookieAuthentication(this IServiceCollection services, IConfigurationRoot config)
+        /// <param name="configRoot"></param>
+        /// <param name="mode"></param>
+        public static AuthenticationBuilder AddCookieAuthentication(
+            this IServiceCollection services,
+            IConfigurationRoot configRoot,
+            SameSiteMode mode = SameSiteMode.Lax
+        )
         {
-            var cookieConfig = config
+            var config = configRoot
                 .GetSection(WebConfiguration.AUTHENTICATION)
                 .GetSection(WebConfiguration.AUTHENTICATION_COOKIE)
                 .Get<CookieAuthenticationConfiguration>();
 
-            // Configuration
+            if (config == null)
+            {
+                var configPath = $"{WebConfiguration.AUTHENTICATION}:{WebConfiguration.AUTHENTICATION_COOKIE}";
+                throw new Exception($"Unable to find configuration for '{configPath}' <CookieAuthenticationConfiguration>");
+            }
+
             var cookie = new CookieBuilder
             {
-                Name = cookieConfig.CookieName,
-                SameSite = SameSiteMode.Lax
+                Name = config.CookieName,
+                SameSite = mode
             };
 
             var cookieEvents = new CookieAuthenticationEvents
@@ -48,19 +64,24 @@ namespace AndcultureCode.CSharp.Web.Extensions
                 }
             };
 
+            services.AddSingleton((sp) => config);
+
             // Register actors
-            services
-                .AddSingleton((sp) => cookieConfig)
-                .AddAuthentication(cookieConfig.AuthenticationScheme)
-                .AddCookie(cookieConfig.AuthenticationScheme, options =>
+            return services
+                .AddAuthentication((options) =>
                 {
-                    options.AccessDeniedPath = new PathString(cookieConfig.AccessDeniedPath);
+                    options.DefaultAuthenticateScheme =
+                    options.DefaultChallengeScheme =
+                    options.DefaultScheme =
+                    options.DefaultSignInScheme = config.AuthenticationScheme;
+                })
+                .AddCookie(config.AuthenticationScheme, options =>
+                {
+                    options.AccessDeniedPath = new PathString(config.AccessDeniedPath);
                     options.Cookie = cookie;
                     options.Events = cookieEvents;
-                    options.LoginPath = new PathString(cookieConfig.LoginPath);
+                    options.LoginPath = new PathString(config.LoginPath);
                 });
-
-            return services;
         }
 
         /// <summary>
