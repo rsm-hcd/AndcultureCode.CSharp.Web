@@ -86,13 +86,7 @@ namespace AndcultureCode.CSharp.Web.Middleware
             return userLogin;
         }
 
-        private static TUserMetadata CreateMetadata(
-            IRepositoryConductor<TUserMetadata> conductor,
-            string type,
-            string name,
-            long userId,
-            string value
-        )
+        private static TUserMetadata CreateMetadata(IRepositoryConductor<TUserMetadata> conductor, string type, string name, long userId, string value)
             => CreateOrThrow(conductor, new TUserMetadata
             {
                 IsNameEditable = false,
@@ -135,15 +129,12 @@ namespace AndcultureCode.CSharp.Web.Middleware
             return user;
         }
 
-        private static TUser FindUserByEmail(IRepositoryConductor<TUser> userConductor, string email)
-        {
-            var userResult = userConductor
+        private static TUser FindUserByEmail(IRepositoryConductor<TUser> conductor, string email)
+            => conductor
                 .FindAll(e => e.Email == email)
                 .ThrowIfAnyErrors()
-                .ResultObject;
-
-            return userResult.FirstOrDefault();
-        }
+                .ResultObject
+                .FirstOrDefault();
 
         private static TUser FindUserByMetadata(IRepositoryConductor<TUserMetadata> metadataConductor, IOAuthUser oauthUser)
         {
