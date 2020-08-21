@@ -73,6 +73,14 @@
   - [Ok\`\`1(value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.Ok``1(``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
   - [StatusCode\`\`1(statusCode,value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-StatusCode``1-System-Int32,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.StatusCode``1(System.Int32,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
 - [GetClaimsCallback](#T-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4-GetClaimsCallback 'AndcultureCode.CSharp.Web.Middleware.OAuthHandler`4.GetClaimsCallback')
+- [GoogleUser](#T-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser')
+  - [Email](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Email 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.Email')
+  - [FirstName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-FirstName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.FirstName')
+  - [Id](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Id 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.Id')
+  - [LastName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-LastName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.LastName')
+  - [Locale](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Locale 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.Locale')
+  - [Name](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Name 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.Name')
+  - [UserMetadataName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-UserMetadataName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.UserMetadataName')
 - [IApiEntityControllerExtensions](#T-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions 'AndcultureCode.CSharp.Web.Extensions.IApiEntityControllerExtensions')
   - [GetDefault\`\`3(controller,id)](#M-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions-GetDefault``3-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController{``0,``1},System-Int64- 'AndcultureCode.CSharp.Web.Extensions.IApiEntityControllerExtensions.GetDefault``3(AndcultureCode.CSharp.Web.Interfaces.IApiEntityController{``0,``1},System.Int64)')
   - [IndexDefault\`\`3(controller)](#M-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions-IndexDefault``3-AndcultureCode-CSharp-Web-Interfaces-IApiEntityController{``0,``1}- 'AndcultureCode.CSharp.Web.Extensions.IApiEntityControllerExtensions.IndexDefault``3(AndcultureCode.CSharp.Web.Interfaces.IApiEntityController{``0,``1})')
@@ -125,6 +133,18 @@
 - [IServiceCollectionExtensions](#T-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions 'AndcultureCode.CSharp.Web.Extensions.IServiceCollectionExtensions')
   - [AddCookieAuthentication(services,configRoot,mode)](#M-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions-AddCookieAuthentication-Microsoft-Extensions-DependencyInjection-IServiceCollection,Microsoft-Extensions-Configuration-IConfigurationRoot,Microsoft-AspNetCore-Http-SameSiteMode- 'AndcultureCode.CSharp.Web.Extensions.IServiceCollectionExtensions.AddCookieAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationRoot,Microsoft.AspNetCore.Http.SameSiteMode)')
   - [AddForwardedHeaders(services)](#M-AndcultureCode-CSharp-Web-Extensions-IServiceCollectionExtensions-AddForwardedHeaders-Microsoft-Extensions-DependencyInjection-IServiceCollection- 'AndcultureCode.CSharp.Web.Extensions.IServiceCollectionExtensions.AddForwardedHeaders(Microsoft.Extensions.DependencyInjection.IServiceCollection)')
+- [MicrosoftUser](#T-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser')
+  - [BusinessPhones](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-BusinessPhones 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.BusinessPhones')
+  - [DisplayName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-DisplayName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.DisplayName')
+  - [Email](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-Email 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.Email')
+  - [FirstName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-FirstName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.FirstName')
+  - [Id](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-Id 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.Id')
+  - [JobTitle](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-JobTitle 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.JobTitle')
+  - [LastName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-LastName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.LastName')
+  - [MobilePhone](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-MobilePhone 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.MobilePhone')
+  - [OfficeLocation](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-OfficeLocation 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.OfficeLocation')
+  - [PreferredLanguage](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-PreferredLanguage 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.PreferredLanguage')
+  - [UserMetadataName](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-UserMetadataName 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.MicrosoftUser.UserMetadataName')
 - [OAuthCreatingTicketContextExtensions](#T-AndcultureCode-GB-Presentation-Web-Extensions-OAuthCreatingTicketContextExtensions 'AndcultureCode.GB.Presentation.Web.Extensions.OAuthCreatingTicketContextExtensions')
   - [GetUser\`\`1()](#M-AndcultureCode-GB-Presentation-Web-Extensions-OAuthCreatingTicketContextExtensions-GetUser``1-Microsoft-AspNetCore-Authentication-OAuth-OAuthCreatingTicketContext- 'AndcultureCode.GB.Presentation.Web.Extensions.OAuthCreatingTicketContextExtensions.GetUser``1(Microsoft.AspNetCore.Authentication.OAuth.OAuthCreatingTicketContext)')
   - [Get\`\`1()](#M-AndcultureCode-GB-Presentation-Web-Extensions-OAuthCreatingTicketContextExtensions-Get``1-Microsoft-AspNetCore-Authentication-OAuth-OAuthCreatingTicketContext- 'AndcultureCode.GB.Presentation.Web.Extensions.OAuthCreatingTicketContextExtensions.Get``1(Microsoft.AspNetCore.Authentication.OAuth.OAuthCreatingTicketContext)')
@@ -1265,6 +1285,66 @@ Requests custom application claims for the user at the correct time in the lifec
 
 
 
+<a name='T-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser'></a>
+## GoogleUser `type`
+
+##### Namespace
+
+AndcultureCode.CSharp.Web.Models.Dtos.Authentication
+
+##### Summary
+
+Data transfer object for google user account
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Email'></a>
+### Email `property`
+
+##### Summary
+
+Email address
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-FirstName'></a>
+### FirstName `property`
+
+##### Summary
+
+Given name / First name
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Id'></a>
+### Id `property`
+
+##### Summary
+
+Uniquely assigned identifier from external oauth provider
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-LastName'></a>
+### LastName `property`
+
+##### Summary
+
+Surname / Lastname
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Locale'></a>
+### Locale `property`
+
+##### Summary
+
+RFC-4646 locale string (en-US)
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Name'></a>
+### Name `property`
+
+##### Summary
+
+Display name of user
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-UserMetadataName'></a>
+### UserMetadataName `property`
+
+##### Summary
+
+Which UserMetadata.Name is associated for this OAuth User type
+
 <a name='T-AndcultureCode-CSharp-Web-Extensions-IApiEntityControllerExtensions'></a>
 ## IApiEntityControllerExtensions `type`
 
@@ -2184,6 +2264,94 @@ Enables HTTP Header forwarding for proxies. This is not enabled by default when 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | services | [Microsoft.Extensions.DependencyInjection.IServiceCollection](#T-Microsoft-Extensions-DependencyInjection-IServiceCollection 'Microsoft.Extensions.DependencyInjection.IServiceCollection') |  |
+
+<a name='T-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser'></a>
+## MicrosoftUser `type`
+
+##### Namespace
+
+AndcultureCode.CSharp.Web.Models.Dtos.Authentication
+
+##### Summary
+
+Data transfer object for microsoft user account
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-BusinessPhones'></a>
+### BusinessPhones `property`
+
+##### Summary
+
+List of business phones
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-DisplayName'></a>
+### DisplayName `property`
+
+##### Summary
+
+General 'name'
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-Email'></a>
+### Email `property`
+
+##### Summary
+
+Email address
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-FirstName'></a>
+### FirstName `property`
+
+##### Summary
+
+Given name / First name
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-Id'></a>
+### Id `property`
+
+##### Summary
+
+Unique external user identifier (guid)
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-JobTitle'></a>
+### JobTitle `property`
+
+##### Summary
+
+Job title
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-LastName'></a>
+### LastName `property`
+
+##### Summary
+
+Surname / Lastname
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-MobilePhone'></a>
+### MobilePhone `property`
+
+##### Summary
+
+Cell phone number
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-OfficeLocation'></a>
+### OfficeLocation `property`
+
+##### Summary
+
+Office address
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-PreferredLanguage'></a>
+### PreferredLanguage `property`
+
+##### Summary
+
+RFC-4646 locale string (en-US)
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-MicrosoftUser-UserMetadataName'></a>
+### UserMetadataName `property`
+
+##### Summary
+
+Which UserMetadata.Name is associated for this OAuth User type
 
 <a name='T-AndcultureCode-GB-Presentation-Web-Extensions-OAuthCreatingTicketContextExtensions'></a>
 ## OAuthCreatingTicketContextExtensions `type`
