@@ -4,7 +4,6 @@ using System.Linq;
 using AndcultureCode.CSharp.Core.Constants;
 using AndcultureCode.CSharp.Core.Enumerations;
 using AndcultureCode.CSharp.Core.Interfaces;
-using AndcultureCode.CSharp.Core.Models;
 using AndcultureCode.CSharp.Extensions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,7 +13,7 @@ using AndcultureCode.CSharp.Core.Utilities.Localization;
 using AndcultureCode.CSharp.Web.Interfaces;
 using Microsoft.AspNetCore.Localization;
 using AndcultureCode.CSharp.Web.Extensions;
-using Microsoft.Net.Http.Headers;
+using AndcultureCode.CSharp.Core.Models.Errors;
 
 namespace AndcultureCode.CSharp.Web.Controllers
 {
@@ -33,7 +32,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <summary>
         /// Requested resource was not found
         /// </summary>
-        public const string ERROR_RESOURCE_NOT_FOUND = "Web.Controller.ERROR_RESOURCE_NOT_FOUND";
+        public const string ERROR_RESOURCE_NOT_FOUND = ErrorConstants.ERROR_RESOURCE_NOT_FOUND_KEY;
 
         #endregion Constants
 

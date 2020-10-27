@@ -1,5 +1,5 @@
 using AndcultureCode.CSharp.Core.Interfaces;
-using AndcultureCode.CSharp.Core.Models;
+using AndcultureCode.CSharp.Core.Models.Errors;
 using Microsoft.AspNetCore.Diagnostics;
 
 namespace AndcultureCode.CSharp.Web.Extensions
