@@ -1,10 +1,10 @@
 [
     {
-        "Key": "Web.Controller.ERROR_ID_MISMATCH",
-        "Value": "A route parameter '{0}' does not match the related '{1}' property on the DTO."
+        "Key": "ERROR_RESOURCE_NOT_FOUND",
+        "Value": "The resource or related resource {0} that was requested was not found."
     },
     {
-        "Key": "Web.Controller.ERROR_RESOURCE_NOT_FOUND",
-        "Value": "The resource or related resource {0} that was requested was not found."
+        "Key": "Web.Controller.ERROR_ID_MISMATCH",
+        "Value": "A route parameter '{0}' does not match the related '{1}' property on the DTO."
     }
 ]
