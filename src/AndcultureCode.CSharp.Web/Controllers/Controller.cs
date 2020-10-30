@@ -108,6 +108,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="value"></param>
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public AcceptedResult Accepted<T>(T value, IEnumerable<IError> errors)
             => base.Accepted(CreateResult(value, errors));
 
@@ -116,6 +117,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// </summary>
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public BadRequestObjectResult BadRequest<T>(IEnumerable<IError> errors)
             => base.BadRequest(CreateResult<object>(null, errors));
 
@@ -125,6 +127,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="value"></param>
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public BadRequestObjectResult BadRequest<T>(T value, IEnumerable<IError> errors)
             => base.BadRequest(CreateResult(value, errors));
 
@@ -134,6 +137,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="value"></param>
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public BadRequestObjectResult BadRequest<T>(T value, params IError[] errors)
             => base.BadRequest(CreateResult(value, errors));
 
@@ -163,6 +167,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="message"></param>
         /// <param name="type"></param>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public BadRequestObjectResult BadRequest<T>(T value, string key, string message, ErrorType type = ErrorType.Error)
             => base.BadRequest(CreateResult(value, new List<Error>
             {
@@ -180,6 +185,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="value"></param>
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public ObjectResult Conflict<T>(T value, IEnumerable<IError> errors)
             => StatusCode(StatusCodes.Status409Conflict, value, errors);
 
@@ -188,6 +194,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// </summary>
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public ObjectResult Conflict<T>(IEnumerable<IError> errors)
             => StatusCode(StatusCodes.Status409Conflict, default(T), errors);
 
@@ -196,6 +203,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// </summary>
         /// <param name="value"></param>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public CreatedResult Created<T>(T value)
             => base.Created(string.Empty, CreateResult(value, null));
 
@@ -205,6 +213,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="uriIdentifier"></param>
         /// <param name="value"></param>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public CreatedResult Created<T>(long uriIdentifier, T value)
             => base.Created(uriIdentifier.ToString(), CreateResult(value, null));
 
@@ -214,6 +223,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="uri"></param>
         /// <param name="value"></param>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public CreatedResult Created<T>(string uri, T value)
             => base.Created(uri, CreateResult(value, null));
 
@@ -224,6 +234,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="value"></param>
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public CreatedResult Created<T>(string uri, T value, IEnumerable<IError> errors)
             => base.Created(uri, CreateResult(value, errors));
 
@@ -234,6 +245,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="value"></param>
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public CreatedResult Created<T>(Uri uri, T value, IEnumerable<IError> errors)
             => base.Created(uri, CreateResult(value, errors));
 
@@ -246,6 +258,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public CreatedAtActionResult CreatedAtAction<T>(string actionName, object routeValues, T value, IEnumerable<IError> errors)
             => base.CreatedAtAction(actionName, routeValues, CreateResult(value, errors));
 
@@ -259,6 +272,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public CreatedAtActionResult CreatedAtAction<T>(string actionName, string controllerName, object routeValues, T value, IEnumerable<IError> errors)
             => base.CreatedAtAction(actionName, controllerName, routeValues, CreateResult(value, errors));
 
@@ -270,6 +284,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public CreatedAtActionResult CreatedAtAction<T>(string actionName, T value, IEnumerable<IError> errors)
             => base.CreatedAtAction(actionName, CreateResult(value, errors));
 
@@ -281,6 +296,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public CreatedAtRouteResult CreatedAtRoute<T>(string routeName, T value, IEnumerable<IError> errors)
             => base.CreatedAtRoute(routeName, CreateResult(value, errors));
 
@@ -292,6 +308,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public CreatedAtRouteResult CreatedAtRoute<T>(object routeValues, T value, IEnumerable<IError> errors)
             => base.CreatedAtRoute(routeValues, CreateResult(value, errors));
 
@@ -304,6 +321,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public CreatedAtRouteResult CreatedAtRoute<T>(string routeName, object routeValues, T value, IEnumerable<IError> errors)
             => base.CreatedAtRoute(routeName, routeValues, CreateResult(value, errors));
 
@@ -314,6 +332,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="value"></param>
         /// <param name="errors"></param>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IResult<T> CreateResult<T>(T value, IEnumerable<IError> errors) => new Result<T>()
         {
             Errors = errors?.ToList(),
@@ -327,6 +346,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public ObjectResult Forbidden<T>(T value, IEnumerable<IError> errors)
             => StatusCode(403, value, errors);
 
@@ -337,6 +357,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public ObjectResult Forbidden<T>(T value, params IError[] errors)
             => StatusCode(403, value, errors);
 
@@ -346,6 +367,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public ObjectResult Forbidden<T>(IEnumerable<IError> errors)
             => StatusCode(403, default(T), errors);
 
@@ -355,6 +377,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public ObjectResult Forbidden<T>(params IError[] errors)
             => StatusCode(403, default(T), errors);
 
@@ -366,6 +389,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="logger"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public ObjectResult InternalError<T>(T value, IEnumerable<IError> errors, ILogger logger = null)
         {
             logger.LogErrors<T>(value, errors);
@@ -380,6 +404,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="logger"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public ObjectResult InternalError<T>(IEnumerable<IError> errors, ILogger logger = null)
             => InternalError(default(T), errors, logger);
 
@@ -392,6 +417,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="logger"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public ObjectResult InternalError<T>(string key, string message, ErrorType type = ErrorType.Error, ILogger logger = null)
             => InternalError(default(T), new List<Error>
             {
@@ -410,6 +436,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public NotFoundObjectResult NotFound<T>(T value, IEnumerable<IError> errors)
             => base.NotFound(CreateResult(value, errors));
 
@@ -419,6 +446,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public NotFoundObjectResult NotFound<T>(IEnumerable<IError> errors)
             => base.NotFound(CreateResult(default(T), errors));
 
@@ -431,6 +459,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="type"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public NotFoundObjectResult NotFound<T>(T value, string key, string message, ErrorType type = ErrorType.Error)
             => base.NotFound(CreateResult(value, new List<Error>
             {
@@ -446,12 +475,14 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// Responds with HTTP 404 Not Found
         /// </summary>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public NotFoundObjectResult NotFound<T>()
             => base.NotFound(CreateResult(default(T), new List<IError> { GetResourceNotFoundError<T>() }));
 
         /// <summary>
         /// Responds with HTTP 200 Ok
         /// </summary>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public new OkObjectResult Ok() => Ok<object>(value: null);
 
         /// <summary>
@@ -459,6 +490,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// </summary>
         /// <param name="value"></param>
         /// <typeparam name="T"></typeparam>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public OkObjectResult Ok<T>(T value) => Ok<T>(value: value, errors: null);
 
         /// <summary>
@@ -468,6 +500,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public OkObjectResult Ok<T>(T value, IEnumerable<IError> errors)
             => base.Ok(CreateResult(value, errors));
 
@@ -482,6 +515,7 @@ namespace AndcultureCode.CSharp.Web.Controllers
         /// <param name="errors"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         public ObjectResult StatusCode<T>(int statusCode, T value, IEnumerable<IError> errors)
             => base.StatusCode(statusCode, CreateResult(value, errors));
 
