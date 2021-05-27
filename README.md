@@ -1,5 +1,5 @@
-# AndcultureCode.CSharp.Web [![Build Status](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Web.svg?branch=master)](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Web) [![codecov](https://codecov.io/gh/AndcultureCode/AndcultureCode.CSharp.Web/branch/master/graph/badge.svg)](https://codecov.io/gh/AndcultureCode/AndcultureCode.CSharp.Web)
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+# AndcultureCode.CSharp.Web
+[![Build Status](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Web.svg?branch=master)](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Web) [![codecov](https://codecov.io/gh/AndcultureCode/AndcultureCode.CSharp.Web/branch/master/graph/badge.svg)](https://codecov.io/gh/AndcultureCode/AndcultureCode.CSharp.Web)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 Common configuration and utilities for building dotnet core presentation web applications
