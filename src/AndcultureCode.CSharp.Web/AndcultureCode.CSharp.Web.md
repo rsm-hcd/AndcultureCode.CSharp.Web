@@ -23,6 +23,13 @@
   - [IsAuthenticated](#P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-IsAuthenticated 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.IsAuthenticated')
   - [IsSuperAdmin](#P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-IsSuperAdmin 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.IsSuperAdmin')
   - [IsUnauthenticated](#P-AndcultureCode-CSharp-Web-Controllers-ApiController`1-IsUnauthenticated 'AndcultureCode.CSharp.Web.Controllers.ApiController`1.IsUnauthenticated')
+- [AuditableDto](#T-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto 'AndcultureCode.CSharp.Web.Models.Dtos.AuditableDto')
+  - [CreatedById](#P-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto-CreatedById 'AndcultureCode.CSharp.Web.Models.Dtos.AuditableDto.CreatedById')
+  - [CreatedOn](#P-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto-CreatedOn 'AndcultureCode.CSharp.Web.Models.Dtos.AuditableDto.CreatedOn')
+  - [DeletedById](#P-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto-DeletedById 'AndcultureCode.CSharp.Web.Models.Dtos.AuditableDto.DeletedById')
+  - [DeletedOn](#P-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto-DeletedOn 'AndcultureCode.CSharp.Web.Models.Dtos.AuditableDto.DeletedOn')
+  - [UpdatedById](#P-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto-UpdatedById 'AndcultureCode.CSharp.Web.Models.Dtos.AuditableDto.UpdatedById')
+  - [UpdatedOn](#P-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto-UpdatedOn 'AndcultureCode.CSharp.Web.Models.Dtos.AuditableDto.UpdatedOn')
 - [Controller](#T-AndcultureCode-CSharp-Web-Controllers-Controller 'AndcultureCode.CSharp.Web.Controllers.Controller')
   - [#ctor(localizer)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-#ctor-Microsoft-Extensions-Localization-IStringLocalizer- 'AndcultureCode.CSharp.Web.Controllers.Controller.#ctor(Microsoft.Extensions.Localization.IStringLocalizer)')
   - [ERROR_ID_MISMATCH](#F-AndcultureCode-CSharp-Web-Controllers-Controller-ERROR_ID_MISMATCH 'AndcultureCode.CSharp.Web.Controllers.Controller.ERROR_ID_MISMATCH')
@@ -72,6 +79,8 @@
   - [Ok\`\`1(value)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok``1-``0- 'AndcultureCode.CSharp.Web.Controllers.Controller.Ok``1(``0)')
   - [Ok\`\`1(value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-Ok``1-``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.Ok``1(``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
   - [StatusCode\`\`1(statusCode,value,errors)](#M-AndcultureCode-CSharp-Web-Controllers-Controller-StatusCode``1-System-Int32,``0,System-Collections-Generic-IEnumerable{AndcultureCode-CSharp-Core-Interfaces-IError}- 'AndcultureCode.CSharp.Web.Controllers.Controller.StatusCode``1(System.Int32,``0,System.Collections.Generic.IEnumerable{AndcultureCode.CSharp.Core.Interfaces.IError})')
+- [EntityDto](#T-AndcultureCode-CSharp-Web-Models-Dtos-EntityDto 'AndcultureCode.CSharp.Web.Models.Dtos.EntityDto')
+  - [Id](#P-AndcultureCode-CSharp-Web-Models-Dtos-EntityDto-Id 'AndcultureCode.CSharp.Web.Models.Dtos.EntityDto.Id')
 - [GetClaimsCallback](#T-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4-GetClaimsCallback 'AndcultureCode.CSharp.Web.Middleware.OAuthHandler`4.GetClaimsCallback')
 - [GoogleUser](#T-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser')
   - [Email](#P-AndcultureCode-CSharp-Web-Models-Dtos-Authentication-GoogleUser-Email 'AndcultureCode.CSharp.Web.Models.Dtos.Authentication.GoogleUser.Email')
@@ -325,6 +334,59 @@ Is the CurrentUser a SuperAdmin
 ##### Summary
 
 Whether the current user is unauthenticated
+
+<a name='T-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto'></a>
+## AuditableDto `type`
+
+##### Namespace
+
+AndcultureCode.CSharp.Web.Models.Dtos
+
+##### Summary
+
+Data transfer object for Auditable models
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto-CreatedById'></a>
+### CreatedById `property`
+
+##### Summary
+
+*Inherit from parent.*
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto-CreatedOn'></a>
+### CreatedOn `property`
+
+##### Summary
+
+*Inherit from parent.*
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto-DeletedById'></a>
+### DeletedById `property`
+
+##### Summary
+
+*Inherit from parent.*
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto-DeletedOn'></a>
+### DeletedOn `property`
+
+##### Summary
+
+*Inherit from parent.*
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto-UpdatedById'></a>
+### UpdatedById `property`
+
+##### Summary
+
+*Inherit from parent.*
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-AuditableDto-UpdatedOn'></a>
+### UpdatedOn `property`
+
+##### Summary
+
+*Inherit from parent.*
 
 <a name='T-AndcultureCode-CSharp-Web-Controllers-Controller'></a>
 ## Controller `type`
@@ -1270,6 +1332,24 @@ HTTP status codes we use.
 | Name | Description |
 | ---- | ----------- |
 | T |  |
+
+<a name='T-AndcultureCode-CSharp-Web-Models-Dtos-EntityDto'></a>
+## EntityDto `type`
+
+##### Namespace
+
+AndcultureCode.CSharp.Web.Models.Dtos
+
+##### Summary
+
+Data transfer object for Entity models
+
+<a name='P-AndcultureCode-CSharp-Web-Models-Dtos-EntityDto-Id'></a>
+### Id `property`
+
+##### Summary
+
+*Inherit from parent.*
 
 <a name='T-AndcultureCode-CSharp-Web-Middleware-OAuthHandler`4-GetClaimsCallback'></a>
 ## GetClaimsCallback `type`
