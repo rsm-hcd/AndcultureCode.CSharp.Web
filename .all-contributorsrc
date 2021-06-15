@@ -53,6 +53,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "snsavage",
+      "name": "Scott Savage",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6299224?v=4",
+      "profile": "http://www.snsavage.com",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
